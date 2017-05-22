@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('admin/product', 'Auth\ProductController');
+Route::resource('admin/promotion', 'Auth\PromotionController');
+Route::resource('admin/blog', 'Auth\BlogController');
+Route::resource('admin/contact', 'Auth\ContactController');
+Route::resource('admin/category', 'Auth\CategoryController');
 
 Auth::routes();
 

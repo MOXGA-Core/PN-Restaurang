@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Panel') }}</title>
+    <title>Panel</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Panel
                     </a>
                 </div>
 
@@ -37,9 +37,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ url('/admin/home') }}">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="{{ url('/admin/promotion') }}">Promotion <span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="{{ url('/admin/blog') }}">Blog <span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="{{ url('/admin/contact') }}">Contact <span class="sr-only">(current)</span></a></li>
+                        <li><a href="{{ url('/admin/promotion') }}">Promotion</a></li>
+                        <li><a href="{{ url('/admin/blog') }}">Blog </a></li>
+                        <li><a href="{{ url('/admin/contact') }}">Contact </a></li>
+                        <li><a href="{{ url('/admin/category') }}">Category </a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -30,6 +30,12 @@
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon1">Picture</span>
                                 <input type="file" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                            </div><br>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">Save</button>
+                            </div>
+                            <div class="btn-group">
+                                <a type="button" href="{{ url('/admin/home') }}" class="btn btn-danger">Cancel</a>
                             </div>
                     </div>
                 </div>
