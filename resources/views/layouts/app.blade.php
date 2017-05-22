@@ -36,7 +36,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="{{ url('/admin/home') }}">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="{{ url('/admin/promotion') }}">Promotion <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="{{ url('/admin/blog') }}">Blog <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="{{ url('/admin/contact') }}">Contact <span class="sr-only">(current)</span></a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -44,7 +47,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

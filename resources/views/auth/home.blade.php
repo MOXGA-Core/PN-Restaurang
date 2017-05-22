@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard
                     <div class="btn-group pull-right">
-                        <button type="button" class="btn btn-danger" style="height: 80% ">Action</button>
+                        <a type="button" class="btn-sm btn-success" href="{{ url('/admin/product/add') }}" style="height: 80%;height: 30px">Add Product</a>
                     </div>
                 </div>
 
