@@ -39,10 +39,11 @@ class ProductController extends Controller
         $path = $request->file('picture')->store('images/product');
         $product = new Product();
         $product->name = $request->name;
-        $product->path = $path;
+        $product->path = "storage/".$path;
         $product->category = $request->category;
         $product->tag = $request->tag;
         $product->detail = $request->detail;
+        $product->amount = $request->amount;
         $product->save();
         return view('auth.product');
     }
@@ -89,6 +90,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::destroy($id);
+        $products = Product::orderBy('id','desc')->paginate(15);
+        return view('auth.home')->with('products',$products);
+
     }
 }

@@ -21,7 +21,7 @@
                                 <br>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Amount</span>
-                                    <input type="text" name="amount" class="form-control" placeholder="0.00"
+                                    <input type="number" name="amount" class="form-control" placeholder="0.00"
                                            aria-describedby="basic-addon1">
                                 </div>
                                 <br>
@@ -57,6 +57,7 @@
                                 </div>
                             </form>
                         </div>
+
                     </div>
                 </div>
             </div>

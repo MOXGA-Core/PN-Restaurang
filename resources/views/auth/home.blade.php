@@ -10,33 +10,34 @@
                         <a type="button" class="btn btn-success btn-sm " href="{{ url('/admin/product') }}" style="height: 80%;height: 30px">Add Product</a>
                     </div>
                 </div>
-
+                @foreach ($products as $product)
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-6 col-md-3">
-                              <img src="..." style="width: 128px; height: 128px" alt="...">
+                              <img src="{{ url($product->path) }}" style="width: 128px; height: 128px" alt="...">
 
                         </div>
-                        <p> awdawdadadadadadaw awdawdadawdawdwad .....</p>
+                        <p><b>{{ $product->name }}</b></p>
+                        <p> {{ $product->detail }}</p>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger">Edit</button>
+                            <button type="button" class="btn btn-warning">Edit</button>
                         </div>
+                        <form id="form{{ $product->id }}" action="{{ url('/admin/product/'.$product->id) }}" method="post" style="display: none;">
+                            {{ method_field('delete') }}
+                            {{ csrf_field() }}
+                        </form>
+                        <div class="btn-group">
+                            <button type="button"  onclick="event.preventDefault();
+                                                     document.getElementById('form{{ $product->id }}').submit();" class="btn btn-danger">Del</button>
+                        </div>
+
+                        <b>( {{ $product->category }} ) </b> {{ $product->updated_at }}
                      </div>
+
                 </div>
                 <hr>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-6 col-md-3">
-                            <img src="..." style="width: 128px; height: 128px" alt="...">
-
-                        </div>
-                        <p>awdawdadadadadadaw awdawdadawdawdwad .....</p>
-
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger">Edit</button>
-                        </div>
-                    </div>
-                </div>
+           @endforeach
+                <div align="center"> {{ $products->links() }}</div>
             </div>
         </div>
     </div>
