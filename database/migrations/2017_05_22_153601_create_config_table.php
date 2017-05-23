@@ -13,13 +13,14 @@ class CreateConfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('config', function (Blueprint $table) {
+        Schema::create('configs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('address',255);
             $table->string('email',255);
             $table->string('name',255);
             $table->string('tel',255);
             $table->string('facebook',255);
+            $table->string('keyword',255);
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateConfigTable extends Migration
      */
     public function down()
     {
-        Schema::drop('config');
+        Schema::drop('configs');
     }
 }

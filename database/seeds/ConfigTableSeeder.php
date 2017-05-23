@@ -11,12 +11,13 @@ class ConfigTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('config')->insert([
+        DB::table('configs')->insert([
             'address' =>'Götgatan 13, 761 45 Norrtelje, Stockholms Län, Sweden',
             'email' => 'Phanouvong66@hotmail.com',
             'name' => 'Restaurant',
             'tel' => '+46 0737 720 749',
             'facebook' =>'Phou Nam Thai Restaurang & Take Away',
+            'keyword' =>'Restaurant',
         ]);
     }
 }

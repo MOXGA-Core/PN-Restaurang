@@ -16,6 +16,7 @@ class ProductTableSeeder extends Seeder
         $product->path = '/assets/img/grid5.jpg';
         $product->category = 'diner';
         $product->tag = 'pomotion';
+        $product->detail = "5555";
         $product->save();
     }
 }
