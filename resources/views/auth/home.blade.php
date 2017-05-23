@@ -27,8 +27,8 @@
                             {{ csrf_field() }}
                         </form>
                         <div class="btn-group">
-                            <button type="button"  onclick="event.preventDefault();
-                                                     document.getElementById('form{{ $product->id }}').submit();" class="btn btn-danger">Del</button>
+                            <button type="button"  onclick="if(confirm('Do you want to delete this product?')){event.preventDefault();
+                                                     document.getElementById('form{{ $product->id }}').submit();} else { return true} " class="btn btn-danger">Del</button>
                         </div>
 
                         <b>( {{ $product->category }} ) </b> {{ $product->updated_at }}

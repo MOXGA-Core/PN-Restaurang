@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-
+use App\Models\Category;
 class ProductController extends Controller
 {
     /**
@@ -13,9 +13,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $redirectTo = '/admin/home';
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        return view('auth.product');
+        $categories = Category::all();
+
+        return view('auth.product')->with('categories', $categories);
     }
 
     /**
@@ -91,8 +99,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::destroy($id);
-        $products = Product::orderBy('id','desc')->paginate(15);
-        return view('auth.home')->with('products',$products);
+        return redirect('admin/home');
 
     }
 }

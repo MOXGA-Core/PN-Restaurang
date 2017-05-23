@@ -7,6 +7,11 @@ use App\Http\Controllers\Controller;
 
 class PromotionController extends Controller
 {
+    protected $redirectTo = '/admin/home';
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

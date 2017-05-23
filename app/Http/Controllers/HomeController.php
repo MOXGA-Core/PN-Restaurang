@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('id','desc')->paginate(15);
-        return view('auth.home')->with('products',$products);
+
+        $products = Product::paginate(15);
+        return view('auth.home')->with(array('products' => $products));
     }
 }

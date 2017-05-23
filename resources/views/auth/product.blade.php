@@ -27,8 +27,12 @@
                                 <br>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Category</span>
-                                    <input type="text" name="category" class="form-control" placeholder="Dinner"
-                                           aria-describedby="basic-addon1">
+                                    <select name="category" class="form-control">
+                                        @foreach($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->category }}</option>
+                                        @endforeach
+                                    </select>
+
                                 </div>
                                 <br>
                                 <div class="input-group">

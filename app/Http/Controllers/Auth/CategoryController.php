@@ -4,9 +4,14 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Models\Category;
 class CategoryController extends Controller
 {
+    protected $redirectTo = '/admin/home';
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('auth.category');
+        $categories = Category::all();
+        return view('auth.category')->with("categories",$categories);
     }
 
     /**
@@ -35,7 +41,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+        $category->category = $request->name;
+        $category->save();
+        return redirect('admin/category');
     }
 
     /**
@@ -80,6 +89,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::destroy($id);
+        return redirect('admin/category');
     }
 }
