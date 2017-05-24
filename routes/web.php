@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'GuestController@index');
 Route::get('promotion', 'GuestController@promotion');
 Route::get('menu', 'GuestController@menu');
 Route::get('reservation', 'GuestController@reservation');

@@ -1,4 +1,4 @@
-<title>Restaurant  - Template</title>
+<title>{{ $title }}</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta charset="utf-8">
