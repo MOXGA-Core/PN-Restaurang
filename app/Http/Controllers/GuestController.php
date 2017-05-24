@@ -7,25 +7,31 @@ use App\Models\Config;
 class GuestController extends Controller
 {
     public function index(){
-        $configs = new Config();
+        $configs = Config::find(1);
         return view('index')->with('config',$configs);
     }
     public function promotion(){
-        return view('promotion');
+        $configs = Config::find(1);
+        return view('promotion')->with('config',$configs);
     }
     public function menu(){
-        return view('menu');
+        $configs = Config::find(1);
+        return view('menu')->with('config',$configs);
     }
     public function reservation(){
-        return view('reservation');
+        $configs = Config::find(1);
+        return view('reservation')->with('config',$configs);
     }
     public function blog(){
-        return view('blog');
+        $configs = Config::find(1);
+        return view('blog')->with('config',$configs);
     }
     public function gallery(){
-        return view('gallery');
+        $configs = Config::find(1);
+        return view('gallery')->with('config',$configs);
     }
     public function contact(){
-        return view('contact');
+        $configs = Config::find(1);
+        return view('contact')->with('config',$configs);
     }
 }

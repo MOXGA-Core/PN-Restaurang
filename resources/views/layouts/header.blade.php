@@ -1,4 +1,3 @@
-
 <!--=====
      header
 =======-->
@@ -10,8 +9,8 @@
                 <div class="col-md-8 col-sm-8 col-xs-12 text-left">
                     <div class="top-header-left">
                         <ul class="top-contact">
-                            <li><a href="tel:1555555555"><i class="fa fa-microphone" aria-hidden="true"></i>Call us today! 1. 555. 555. 555 </a></li>
-                            <li><a href="mailto:hello@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>hello@example.com</a></li>
+                            <li><a href="tel:1555555555"><i class="fa fa-microphone" aria-hidden="true"></i>{{ $config->tel }}</a></li>
+                            <li><a href="mailto:{{ $config->email }}"><i class="fa fa-envelope-o" aria-hidden="true"></i>{{ $config->email }}</a></li>
                         </ul>
                     </div> <!-- top-header-left end -->
                 </div>
