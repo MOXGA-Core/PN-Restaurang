@@ -14,28 +14,7 @@
 <div class="section-wrapper">
 @include('layouts.header')
 
-    <!--site search-->
-    <div class="site-search">
-        <button type="button" class="close search-close"><span class="fa fa-close"></span></button>
-        <div class="form-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3 col-xl-6 col-xl-offset-3">
-                        <form role="search" method="get" class="search-form form" action="#">
-                            <label class="sr-only">Search for:</label>
-                            <div class="input-group">
-                                <input name="s" class="search-field form-control" placeholder="Enter Keyword" required="" type="search">
-                                <span class="input-group-btn">
-							<button type="submit" class="search-submit btn btn-primary"><span>Search</span><span><i class="icon icon-search"></i></span></button>
-							</span>
-                            </div>
-                        </form>
-                        <p>Input your search keywords and press Enter.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 
@@ -475,19 +454,19 @@
     <!--======
         Contact section
     =====-->
-    <section class="section-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading text-center mb-75">
-                        <h2 class="section-title"><span class="colored">Make a reservation</span></h2>
-                        <div class="divider">
-                            <img src="assets/img/divider-white.png" alt="Divider Image">
-                        </div>
-                    </div><!--section-heading-->
-                </div>
-            </div><!--row-->
-            <div class="row">
+    <!--    <section class="section-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading text-center mb-75">
+                            <h2 class="section-title"><span class="colored">Make a reservation</span></h2>
+                            <div class="divider">
+                                <img src="assets/img/divider-white.png" alt="Divider Image">
+                            </div>
+                        </div><!--section-heading-->
+    <!--           </div>
+           </div><!--row-->
+    <!--        <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <div class="contact-form-wrap contact-dark-bg">
                         <form class="reservation-form img-icon-input">
@@ -498,57 +477,57 @@
 
                                         <span class="icon"><img src="assets/img/calendar.png" alt="Image"></span>
                                     </div><!-- /input-group -->
+    <!--                          </div>
+
+                              <div class="col-md-6">
+                                  <div class="input-group ">
+                                      <input type="text" class="form-control dark" name="time" id="timepicker" placeholder="Time">
+
+                                      <span class="icon"><img src="assets/img/clock.png" alt="Image"></span>
+                                  </div><!-- /input-group -->
+    <!--                        </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group ">
+                                    <select name="number-people"  class="form-control dark">
+                                        <option value="1">No of people</option>
+                                        <option value="2">1 person</option>
+                                        <option value="3">2 persons</option>
+                                        <option value="4">3 persons</option>
+                                        <option value="5">4 persons</option>
+                                        <option value="6">5 persons</option>
+                                    </select>
+
+                                    <span class="icon"><img src="assets/img/peoples.png" alt="Image"></span>
+                                </div><!-- /input-group -->
+    <!--                           </div>
+
+                               <div class="col-md-6">
+                                   <div class="input-group ">
+                                       <select name="barnch"  class="form-control dark">
+                                           <option value="0">Restaurant branch</option>
+                                           <option value="1">NewYork branch</option>
+                                           <option value="2">Sydney branch</option>
+                                       </select>
+                                       <span class="icon"><img src="assets/img/table.png" alt="Restaurant branch"></span>
+                                   </div><!-- /input-group -->
+    <!--                        </div>
+
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <button type="submit" class="btn-block btn-primary btn-submit">Find a Table</button>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <div class="input-group ">
-                                        <input type="text" class="form-control dark" name="time" id="timepicker" placeholder="Time">
-
-                                        <span class="icon"><img src="assets/img/clock.png" alt="Image"></span>
-                                    </div><!-- /input-group -->
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="input-group ">
-                                        <select name="number-people"  class="form-control dark">
-                                            <option value="1">No of people</option>
-                                            <option value="2">1 person</option>
-                                            <option value="3">2 persons</option>
-                                            <option value="4">3 persons</option>
-                                            <option value="5">4 persons</option>
-                                            <option value="6">5 persons</option>
-                                        </select>
-
-                                        <span class="icon"><img src="assets/img/peoples.png" alt="Image"></span>
-                                    </div><!-- /input-group -->
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="input-group ">
-                                        <select name="barnch"  class="form-control dark">
-                                            <option value="0">Restaurant branch</option>
-                                            <option value="1">NewYork branch</option>
-                                            <option value="2">Sydney branch</option>
-                                        </select>
-                                        <span class="icon"><img src="assets/img/table.png" alt="Restaurant branch"></span>
-                                    </div><!-- /input-group -->
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="text-center">
-                                        <button type="submit" class="btn-block btn-primary btn-submit">Find a Table</button>
-                                    </div>
-                                </div>
-                            </div><!--row-->
-                        </form><!-- .reservation-form -->
+                            </div>
+                        </div><!--row-->
+    <!--                </form><!-- .reservation-form -->
                     </div><!-- .contact-form-wrap -->
-                </div><!--col-md-12-->
-            </div>
-        </div>
-    </section>
-    <!--======
-        `section cantact end
-    ====-->
+<!--           </div><!--col-md-12-->
+<!--        </div>
+    </div>
+</section>
+<!--======
+    `section cantact end
+====-->
 
             @include('layouts.footer')
 

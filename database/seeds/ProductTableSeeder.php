@@ -15,7 +15,7 @@ class ProductTableSeeder extends Seeder
             $product = new \App\Models\Product();
             $product->name = 'wandeee';
             $product->path = '/assets/img/grid5.jpg';
-            $product->category = 'Launch ';
+            $product->category = 'Launch';
             $product->tag = 'pomotion';
             $product->detail = "5555";
             $product->save();

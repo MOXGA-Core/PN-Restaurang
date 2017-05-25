@@ -9,9 +9,10 @@
         <li>
             <a href="menu">Menu</a>
         </li>
-        <li>
-            <a href="reservation">Reservation</a>
-        </li>
+        <!-- <li>
+                 <a href="reservation">Reservation</a>
+             </li>
+             -->
         <li>
             <a href="blog">Blog</a>
         </li>

@@ -491,6 +491,7 @@
     <!--======
         Contact section
     =====-->
+    <!--
     <section class="section-reservation-mod">
         <div class="container">
             <div class="row">
@@ -501,45 +502,45 @@
                             <img src="assets/img/divider-white.png" alt="Divider Image">
                         </div>
                     </div><!--section-heading-->
-                </div>
+    <!--            </div>
             </div><!--row-->
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="contact-form-wrap contact-dark-bg">
-                        <form class="reservation-form img-icon-input">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <input type="text" id='datepicker' class="form-control dark" name="date"
-                                               placeholder="Date">
+    <!--         <div class="row">
+                 <div class="col-sm-10 col-sm-offset-1">
+                     <div class="contact-form-wrap contact-dark-bg">
+                         <form class="reservation-form img-icon-input">
+                             <div class="row">
+                                 <div class="col-md-6">
+                                     <div class="input-group">
+                                         <input type="text" id='datepicker' class="form-control dark" name="date"
+                                                placeholder="Date">
 
-                                        <span class="icon"><img src="assets/img/calendar.png" alt="Image"></span>
-                                    </div><!-- /input-group -->
-                                </div>
+                                         <span class="icon"><img src="assets/img/calendar.png" alt="Image"></span>
+                                     </div><!-- /input-group -->
+    <!--                        </div>
 
-                                <div class="col-md-6">
-                                    <div class="input-group ">
-                                        <input type="text" class="form-control dark" name="time" id="timepicker"
-                                               placeholder="Time">
+                            <div class="col-md-6">
+                                <div class="input-group ">
+                                    <input type="text" class="form-control dark" name="time" id="timepicker"
+                                           placeholder="Time">
 
-                                        <span class="icon"><img src="assets/img/clock.png" alt="Image"></span>
-                                    </div><!-- /input-group -->
-                                </div>
+                                    <span class="icon"><img src="assets/img/clock.png" alt="Image"></span>
+                                </div><!-- /input-group -->
+    <!--                        </div>
 
-                                <div class="col-md-6">
-                                    <div class="input-group ">
-                                        <select name="number-people" class="form-control dark">
-                                            <option value="1">No of people</option>
-                                            <option value="2">1 person</option>
-                                            <option value="3">2 persons</option>
-                                            <option value="4">3 persons</option>
-                                            <option value="5">4 persons</option>
-                                            <option value="6">5 persons</option>
-                                        </select>
+                            <div class="col-md-6">
+                                <div class="input-group ">
+                                    <select name="number-people" class="form-control dark">
+                                        <option value="1">No of people</option>
+                                        <option value="2">1 person</option>
+                                        <option value="3">2 persons</option>
+                                        <option value="4">3 persons</option>
+                                        <option value="5">4 persons</option>
+                                        <option value="6">5 persons</option>
+                                    </select>
 
-                                        <span class="icon"><img src="assets/img/peoples.png" alt="Image"></span>
-                                    </div><!-- /input-group -->
-                                </div>
+                                    <span class="icon"><img src="assets/img/peoples.png" alt="Image"></span>
+                                </div><!-- /input-group -->
+    <!--                            </div>
 
                                 <div class="col-md-6">
                                     <div class="input-group ">
@@ -551,7 +552,7 @@
                                         <span class="icon"><img src="assets/img/table.png"
                                                                 alt="Restaurant branch"></span>
                                     </div><!-- /input-group -->
-                                </div>
+    <!--                            </div>
 
                                 <div class="col-md-12">
                                     <div class="text-center">
@@ -560,15 +561,15 @@
                                     </div>
                                 </div>
                             </div><!--row-->
-                        </form><!-- .reservation-form -->
-                    </div><!-- .contact-form-wrap -->
-                </div><!--col-md-12-->
-            </div>
-        </div>
-    </section>
-    <!--======
-        `section cantact end
-    ====-->
+    <!--                    </form><!-- .reservation-form -->
+    <!--                </div><!-- .contact-form-wrap -->
+    <!--           </div><!--col-md-12-->
+    <!--       </div>
+       </div>
+   </section>
+   <!--======
+       `section cantact end
+   ====-->
 
 
     <!--=====

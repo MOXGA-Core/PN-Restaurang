@@ -34,44 +34,19 @@
 
         <ul id="filter" class="filter">
             <li><a class="active" href="#" data-group="all">All</a></li>
-            <li><a href="#" data-group="breakfast">Breakfast</a></li>
-            <li><a href="#" data-group="dinner">Dinner</a></li>
-            <li><a href="#" data-group="snacks">Snacks</a></li>
-            <li><a href="#" data-group="lunch">Lunch</a></li>
+            @foreach($categories as $category)
+            <li><a href="#" data-group="{{ $category->category }}">{{ $category->category }}</a></li>
+            @endforeach
+
         </ul>
 
 
         <div id="grid" class="grid-gallery">
-            <div class="grid-item" data-groups='["all", "lunch", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
+            @foreach($products as $product)
+            <div class="grid-item" data-groups='["all", "{{ $product->category  }}"]'> <img src="{{ $product->path  }}" alt="Grid Image">
+                <a href="{{ $product->path  }}" class="popup-link" title="{{ $product->name  }}"><img src="{{ $product->path  }}" alt="{{ $product->tag  }}"></a>
             </div>
-            <div class="grid-item" data-groups='["all", "breakfast", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "dinner", "breakfast"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "snacks"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "breakfast", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "lunch", "snacks"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "snacks", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "lunch", "dinner"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
-            <div class="grid-item" data-groups='["all", "breakfast", "snacks"]'> <img src="assets/img/grid1.jpg" alt="Grid Image">
-                <a href="assets/img/grid1.jpg" class="popup-link" title="Image caption"><img src="assets/img/plus.png" alt="Plus Image"></a>
-            </div>
+            @endforeach
         </div>
 
 

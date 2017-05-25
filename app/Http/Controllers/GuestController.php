@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Config;
 use App\Models\Product;
+use App\Models\Category;
 class GuestController extends Controller
 {
     public function index(){
@@ -33,9 +34,10 @@ class GuestController extends Controller
         return view('blog')->with(array('config'=>$configs , 'products'=>$products));
     }
     public function gallery(){
-        $products = Product::all();
+        $products = Product::orderBy('id','desc')->get();;
         $configs = Config::find(1);
-        return view('gallery')->with(array('config'=>$configs , 'products'=>$products));
+        $categories = Category::all();
+        return view('gallery')->with(array('config'=>$configs , 'products'=>$products , 'categories'=>$categories));
     }
     public function contact(){
         $products = Product::all();

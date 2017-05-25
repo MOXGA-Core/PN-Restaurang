@@ -95,19 +95,16 @@
 
                     <div class="mb-20">
                         <div class="contact-info">
-                            <h6>New York Branch</h6>
-                            <p>2246 Progress Way, New York, 10001, USA
-                                Phone: 319-866-0990, 21-254-537</p>
+                            <h6>Address</h6>
+                            <p>{{ $config->address }}</p>
                         </div>
                         <div class="contact-info">
-                            <h6>Melbourne Branch</h6>
-                            <p>2246 Progress Way, New York, 10001, USA
-                                Phone: 319-866-0990, 21-254-537</p>
+                            <h6>Email</h6>
+                            <p>{{ $config->email }}</p>
                         </div>
                         <div class="contact-info">
-                            <h6>Sydney Branch</h6>
-                            <p>2246 Progress Way, New York, 10001, USA
-                                Phone: 319-866-0990, 21-254-537</p>
+                            <h6>Tel</h6>
+                            <p>{{ $config->tel }}</p>
                         </div>
                     </div><!--contact-info-->
                 </div><!--col-sm-4-->
