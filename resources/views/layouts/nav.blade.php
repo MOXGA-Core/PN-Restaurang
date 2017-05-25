@@ -21,6 +21,6 @@
         <li>
             <a href="contact">Contact</a>
         </li>
-        <li><a href="#" class="btn-search"><i class="fa fa-search"></i></a></li>
+
     </ul>
 </div><!-- /.navbar-collapse -->

@@ -9,20 +9,14 @@
                 <div class="col-md-8 col-sm-8 col-xs-12 text-left">
                     <div class="top-header-left">
                         <ul class="top-contact">
-                            <li><a href="tel:1555555555"><i class="fa fa-microphone" aria-hidden="true"></i>{{ $config->tel }}</a></li>
+                            <li><a href="tel:{{ $config->tel }}"><i class="fa fa-microphone" aria-hidden="true"></i>{{ $config->tel }}</a></li>
                             <li><a href="mailto:{{ $config->email }}"><i class="fa fa-envelope-o" aria-hidden="true"></i>{{ $config->email }}</a></li>
                         </ul>
                     </div> <!-- top-header-left end -->
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-xs-12 text-right">
-                    <ul class="social-list mb-0 text-right">
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href=""><i class="fa fa-vimeo"></i></a></li>
-                        <li><a href=""><i class="fa fa-rss"></i></a></li>
-                    </ul>
+
                 </div>
             </div>
         </div>

@@ -11,12 +11,15 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
-        $product = new \App\Models\Product();
-        $product->name = 'wandeee';
-        $product->path = '/assets/img/grid5.jpg';
-        $product->category = 'diner';
-        $product->tag = 'pomotion';
-        $product->detail = "5555";
-        $product->save();
+        for ($i = 0 ; $i< 50; $i++){
+            $product = new \App\Models\Product();
+            $product->name = 'wandeee';
+            $product->path = '/assets/img/grid5.jpg';
+            $product->category = 'Launch ';
+            $product->tag = 'pomotion';
+            $product->detail = "5555";
+            $product->save();
+        }
+
     }
 }

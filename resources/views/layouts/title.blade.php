@@ -1,8 +1,8 @@
 <title>{{ $config->name }}</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="description" content="Restaurant">
+<meta name="keywords" content="{{ $config->keyword }}">
 <meta charset="utf-8">
-<meta name="author" content="Restaurant template">
+<meta name="author" content="MisterNT">
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 

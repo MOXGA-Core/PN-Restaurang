@@ -24,8 +24,11 @@
                     <div class="col-md-8 col-sm-8 col-xs-12 text-left">
                         <div class="top-header-left">
                             <ul class="top-contact">
-                                <li><a href="tel:1555555555"><i class="fa fa-microphone" aria-hidden="true"></i>Call: +46 176 129 00 </a></li>
-                                <li><a href="mailto:Phanouvong66@hotmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>Mail: Phanouvong66@hotmail.com</a></li>
+                                <li><a href="tel:{{ $config->tel }}"><i class="fa fa-microphone" aria-hidden="true"></i>Call:{{ $config->tel }}
+                                    </a></li>
+                                <li><a href="mailto:{{ $config->email }}"><i class="fa fa-envelope-o"
+                                                                             aria-hidden="true"></i>Mail: {{ $config->email }}
+                                    </a></li>
                             </ul>
                         </div> <!-- top-header-left end -->
                     </div>
@@ -41,12 +44,12 @@
         <!--header-top-bar-->
 
 
-
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="row">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-menu" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target=".main-menu" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -56,8 +59,8 @@
                             <img src="assets/img/logo.png" alt="Logo">
                         </a>
                     </div>
-                    @include('layouts.nav')
-                    <!-- /.navbar-collapse -->
+                @include('layouts.nav')
+                <!-- /.navbar-collapse -->
                 </div><!-- .row -->
             </div>
         </nav>
@@ -66,7 +69,6 @@
     <!--=====
          header end
     =======-->
-
 
 
     <!--site search-->
@@ -79,9 +81,11 @@
                         <form role="search" method="get" class="search-form form" action="#">
                             <label class="sr-only">Search for:</label>
                             <div class="input-group">
-                                <input name="s" class="search-field form-control" placeholder="Enter Keyword" required="" type="search">
+                                <input name="s" class="search-field form-control" placeholder="Enter Keyword"
+                                       required="" type="search">
                                 <span class="input-group-btn">
-							<button type="submit" class="search-submit btn btn-primary"><span>Search</span><span><i class="icon icon-search"></i></span></button>
+							<button type="submit" class="search-submit btn btn-primary"><span>Search</span><span><i
+                                            class="icon icon-search"></i></span></button>
 							</span>
                             </div>
                         </form>
@@ -145,11 +149,11 @@
                     <div class="col-md-8">
                         <div class="reservation-hours">
                             <div class="reserve-time">
-                                <span class="days">Monday - Friday</span >
+                                <span class="days">Monday - Friday</span>
                                 <span class="time">10:30 - 21:00</span>
                             </div><!--reserve-time-->
                             <div class="reserve-time">
-                                <span class="days">Saturday - Sunday</span >
+                                <span class="days">Saturday - Sunday</span>
                                 <span class="time">12:00 - 21:00</span>
                             </div><!--reserve-time-->
                         </div><!--reservation-hours-->
@@ -161,8 +165,6 @@
     <!--=====
          section-opening-hours end
     =======-->
-
-
 
 
     <!--=====
@@ -180,7 +182,9 @@
                     </div><!--section-heading-->
 
                     <div class="intro-text-block text-center lh30">
-                        Food is like life. We have kept our experience and practice difficult for a long time. We want all customers. Get pleasure and impression during the meal. With flavors that are meticulously cooked.
+                        Food is like life. We have kept our experience and practice difficult for a long time. We want
+                        all customers. Get pleasure and impression during the meal. With flavors that are meticulously
+                        cooked.
 
                         <div>
                             <a href="#" class="btn-primary mt-50 mb-30">Learn More</a>
@@ -233,7 +237,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div  class="food-menu-wrapper">
+                    <div class="food-menu-wrapper">
 
                         <!-- Tab navs -->
                         <ul class="food-nav" role="tablist">
@@ -241,8 +245,10 @@
                                 <a href="#fitem2" data-toggle="tab">
                                     <div class="food-nav-item">
                                         <div class="nav-icon">
-                                            <img class="nrm-icon" src="assets/img/icons/lunch_01.png" alt="Food nav icon">
-                                            <img class="hvr-icon" src="assets/img/icons/lunch_02.png" alt="Food nav icon">
+                                            <img class="nrm-icon" src="assets/img/icons/lunch_01.png"
+                                                 alt="Food nav icon">
+                                            <img class="hvr-icon" src="assets/img/icons/lunch_02.png"
+                                                 alt="Food nav icon">
                                         </div>
                                         <div class="nav-text">
                                             <h5>Launch</h5>
@@ -256,8 +262,10 @@
                                 <a href="#fitem3" data-toggle="tab">
                                     <div class="food-nav-item">
                                         <div class="nav-icon">
-                                            <img class="nrm-icon" src="assets/img/icons/dinner_01.png" alt="Food nav icon">
-                                            <img class="hvr-icon" src="assets/img/icons/dinner_02.png" alt="Food nav icon">
+                                            <img class="nrm-icon" src="assets/img/icons/dinner_01.png"
+                                                 alt="Food nav icon">
+                                            <img class="hvr-icon" src="assets/img/icons/dinner_02.png"
+                                                 alt="Food nav icon">
                                         </div>
                                         <div class="nav-text">
                                             <h5>Dinner</h5>
@@ -271,8 +279,10 @@
                                 <a href="#fitem1" data-toggle="tab">
                                     <div class="food-nav-item">
                                         <div class="nav-icon">
-                                            <img class="nrm-icon" src="assets/img/icons/breakfast_01.png" alt="Food nav icon">
-                                            <img class="hvr-icon" src="assets/img/icons/breakfast_02.png" alt="Food nav icon">
+                                            <img class="nrm-icon" src="assets/img/icons/breakfast_01.png"
+                                                 alt="Food nav icon">
+                                            <img class="hvr-icon" src="assets/img/icons/breakfast_02.png"
+                                                 alt="Food nav icon">
                                         </div>
                                         <div class="nav-text">
                                             <h5>Dessert</h5>
@@ -285,8 +295,10 @@
                                 <a href="#fitem4" data-toggle="tab">
                                     <div class="food-nav-item">
                                         <div class="nav-icon">
-                                            <img class="nrm-icon" src="assets/img/icons/drinks_01.png" alt="Food nav icon">
-                                            <img class="hvr-icon" src="assets/img/icons/drinks_02.png" alt="Food nav icon">
+                                            <img class="nrm-icon" src="assets/img/icons/drinks_01.png"
+                                                 alt="Food nav icon">
+                                            <img class="hvr-icon" src="assets/img/icons/drinks_02.png"
+                                                 alt="Food nav icon">
                                         </div>
                                         <div class="nav-text">
                                             <h5>Drink</h5>
@@ -303,66 +315,7 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">Beef steak</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">SICILIAN MEATBALLS</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">ROASTED DUCK LEG</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">OCTOPUS</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
+                                            #Desset
                                             <li>
                                                 <a href="food.html">
                                                     <div class="menu-media">
@@ -373,7 +326,8 @@
                                                             <span class="title">VEAL MINI ESCALOPES</span>
                                                             <span class="price">$4.3</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
+                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
+                                                            natural sabor suave.</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
@@ -381,70 +335,12 @@
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
                             </div><!--tab-pane-->
+
                             <div class="tab-pane fade" id="fitem2">
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">GRILLED FISH</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">MUSSELS SOUP</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">SMOKED TROUT</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">VENISON CONFIT</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
+                                            #Launch
                                             <li>
                                                 <a href="food.html">
                                                     <div class="menu-media">
@@ -455,7 +351,8 @@
                                                             <span class="title">SICILIAN MEATBALLS</span>
                                                             <span class="price">$4.3</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
+                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
+                                                            natural sabor suave.</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
@@ -463,70 +360,13 @@
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
                             </div><!--tab-pane-->
+
                             <div class="tab-pane fade" id="fitem3">
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <li>
 
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">STUFFED STRAWBERRY</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">SICILIAN MEATBALLS</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">ROAST CHICKEN</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">Beef steak</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
+                                           #Dinner
                                             <li>
                                                 <a href="food.html">
                                                     <div class="menu-media">
@@ -537,7 +377,8 @@
                                                             <span class="title">Beef steak</span>
                                                             <span class="price">$4.3</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
+                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
+                                                            natural sabor suave.</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
@@ -545,70 +386,12 @@
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
                             </div><!--tab-pane-->
+
                             <div class="tab-pane fade" id="fitem4">
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">SICILIAN MEATBALLS</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">SEAFOOD SALAD</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">ITALIAN SPAGHETTI</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
-                                            <li>
-
-                                                <a href="food.html">
-                                                    <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
-                                                    </div><!--menu-media-->
-                                                    <div class="menu-details">
-                                                        <div class="heading clearfix">
-                                                            <span class="title">STUFFED STRAWBERRY</span>
-                                                            <span class="price">$4.3</span>
-                                                        </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                    </div><!--menu-details-->
-                                                </a>
-                                            </li>
+                                           #Dink
                                             <li>
                                                 <a href="food.html">
                                                     <div class="menu-media">
@@ -619,10 +402,12 @@
                                                             <span class="title">Beef steak</span>
                                                             <span class="price">$4.3</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
+                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
+                                                            natural sabor suave.</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
+
                                         </ul><!--food-menu-list-->
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
@@ -646,30 +431,7 @@
                 <div class="row">
                     <!--                            <div class="col-sm-12">-->
                     <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-                        <div class="related-post">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="assets/img/grid5.jpg" alt="IMage">
-                                    <span class="layer"><i>Best Beef steak</i></span>
-                                </a>
-                            </div>
-                        </div> <!--related-post-->
-                        <div class="related-post">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="assets/img/grid5.jpg" alt="IMage">
-                                    <span class="layer"><i>Delicious Chicken flavors</i></span>
-                                </a>
-                            </div>
-                        </div> <!--related-post-->
-                        <div class="related-post">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="assets/img/grid5.jpg" alt="IMage">
-                                    <span class="layer"><i>Breakfast you need to take</i></span>
-                                </a>
-                            </div>
-                        </div> <!--related-post-->
+
                         <div class="related-post">
                             <div class="item">
                                 <a href="#">
@@ -688,30 +450,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Best Beef steak</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Delicious Chicken flavors</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Breakfast you need to take</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
+
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
@@ -720,36 +459,15 @@
                                     </a>
                                 </div>
                             </div> <!--related-post-->
+
                         </div> <!--related-post-slide-->
                         <!--                            </div>-->
 
                     </div>
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Best Beef steak</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Delicious Chicken flavors</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Breakfast you need to take</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
+
+
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
@@ -792,7 +510,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-group">
-                                        <input type="text" id='datepicker' class="form-control dark" name="date" placeholder="Date">
+                                        <input type="text" id='datepicker' class="form-control dark" name="date"
+                                               placeholder="Date">
 
                                         <span class="icon"><img src="assets/img/calendar.png" alt="Image"></span>
                                     </div><!-- /input-group -->
@@ -800,7 +519,8 @@
 
                                 <div class="col-md-6">
                                     <div class="input-group ">
-                                        <input type="text" class="form-control dark" name="time" id="timepicker" placeholder="Time">
+                                        <input type="text" class="form-control dark" name="time" id="timepicker"
+                                               placeholder="Time">
 
                                         <span class="icon"><img src="assets/img/clock.png" alt="Image"></span>
                                     </div><!-- /input-group -->
@@ -808,7 +528,7 @@
 
                                 <div class="col-md-6">
                                     <div class="input-group ">
-                                        <select name="number-people"  class="form-control dark">
+                                        <select name="number-people" class="form-control dark">
                                             <option value="1">No of people</option>
                                             <option value="2">1 person</option>
                                             <option value="3">2 persons</option>
@@ -823,18 +543,20 @@
 
                                 <div class="col-md-6">
                                     <div class="input-group ">
-                                        <select name="barnch"  class="form-control dark">
+                                        <select name="barnch" class="form-control dark">
                                             <option value="0">Restaurant branch</option>
                                             <option value="1">NewYork branch</option>
                                             <option value="2">Sydney branch</option>
                                         </select>
-                                        <span class="icon"><img src="assets/img/table.png" alt="Restaurant branch"></span>
+                                        <span class="icon"><img src="assets/img/table.png"
+                                                                alt="Restaurant branch"></span>
                                     </div><!-- /input-group -->
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="text-center">
-                                        <button type="submit" class="btn-block btn-primary btn-submit">Find a Table</button>
+                                        <button type="submit" class="btn-block btn-primary btn-submit">Find a Table
+                                        </button>
                                     </div>
                                 </div>
                             </div><!--row-->
@@ -873,7 +595,8 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                    <p class="lh30">Rekommenderar. God mat och god service. Trevlig och engagerad personal. Är stamkund sedan restaurangen bytte ägare</p>
+                                    <p class="lh30">Rekommenderar. God mat och god service. Trevlig och engagerad
+                                        personal. Är stamkund sedan restaurangen bytte ägare</p>
                                 </div>
                             </div><!--dish-carousel-inner-->
                         </div>
@@ -932,7 +655,8 @@
                                 <span>09</span>
                                 <span class="month">Nov</span>
                             </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is Freaking Out</a></h5>
+                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
+                                    Freaking Out</a></h5>
                             <ul class="blog-post-meta">
                                 <li><i class="fa fa-comments-o"></i>17</li>
                                 <li><i class="fa fa-eye"></i>17</li>
@@ -940,7 +664,10 @@
                             </ul>
                             <div class="text-block">
                                 <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium, totam for aperiam, ipsa too quae  aend ab illo inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium.</p>
+                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
+                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
+                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
+                                        voluptatem accusantium dolorea nor udantium.</p>
                                 </div>
                             </div>
                         </article><!--blog-post-->
@@ -949,7 +676,8 @@
                                 <span>09</span>
                                 <span class="month">Nov</span>
                             </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is Freaking Out</a></h5>
+                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
+                                    Freaking Out</a></h5>
                             <ul class="blog-post-meta">
                                 <li><i class="fa fa-comments-o"></i>17</li>
                                 <li><i class="fa fa-eye"></i>17</li>
@@ -957,7 +685,10 @@
                             </ul>
                             <div class="text-block">
                                 <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium, totam for aperiam, ipsa too quae  aend ab illo inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium.</p>
+                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
+                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
+                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
+                                        voluptatem accusantium dolorea nor udantium.</p>
                                 </div>
                             </div>
                         </article><!--blog-post-->
@@ -966,7 +697,8 @@
                                 <span>09</span>
                                 <span class="month">Nov</span>
                             </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is Freaking Out</a></h5>
+                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
+                                    Freaking Out</a></h5>
                             <ul class="blog-post-meta">
                                 <li><i class="fa fa-comments-o"></i>17</li>
                                 <li><i class="fa fa-eye"></i>17</li>
@@ -974,7 +706,10 @@
                             </ul>
                             <div class="text-block">
                                 <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium, totam for aperiam, ipsa too quae  aend ab illo inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem accusantium dolorea nor udantium.</p>
+                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
+                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
+                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
+                                        voluptatem accusantium dolorea nor udantium.</p>
                                 </div>
                             </div>
                         </article><!--blog-post-->
@@ -986,8 +721,6 @@
     <!--=====
          section-blog
     =======-->
-
-
 
 
 @extends('layouts.footer')

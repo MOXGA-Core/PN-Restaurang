@@ -29,7 +29,7 @@
                                     <span class="input-group-addon" id="basic-addon1">Category</span>
                                     <select name="category" class="form-control">
                                         @foreach($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->category }}</option>
+                                        <option value="{{ $category->category }}">{{ $category->category }}</option>
                                         @endforeach
                                     </select>
 

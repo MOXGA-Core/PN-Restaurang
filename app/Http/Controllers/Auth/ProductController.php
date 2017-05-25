@@ -53,7 +53,7 @@ class ProductController extends Controller
         $product->detail = $request->detail;
         $product->amount = $request->amount;
         $product->save();
-        return view('auth.product');
+        return redirect('admin/home');
     }
 
     /**

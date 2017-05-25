@@ -17,7 +17,7 @@ Route::get('menu', 'GuestController@menu');
 Route::get('reservation', 'GuestController@reservation');
 Route::get('blog','GuestController@blog');
 Route::get('gallery','GuestController@gallery');
-
+Route::get('contact','GuestController@contact');
 
 Auth::routes();
 
@@ -27,5 +27,3 @@ Route::resource('admin/promotion', 'Auth\PromotionController');
 Route::resource('admin/blog', 'Auth\BlogController');
 Route::resource('admin/contact', 'Auth\ContactController');
 Route::resource('admin/category', 'Auth\CategoryController');
-
-
