@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/test',function (){
+    return view('single_blog');
+});
 
 Route::get('/', 'GuestController@index');
 Route::get('promotion', 'GuestController@promotion');

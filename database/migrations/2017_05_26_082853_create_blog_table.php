@@ -15,7 +15,10 @@ class CreateBlogTable extends Migration
     {
         Schema::create('blog', function (Blueprint $table) {
             $table->increments('id',255)->index();
-            $table->text('text',655);
+            $table->string('path',655);
+            $table->text('detail',655);
+            $table->string('link',255);
+            $table->enum('type',array('top','small'));
             $table->timestamps();
         });
     }

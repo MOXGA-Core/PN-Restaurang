@@ -96,15 +96,15 @@
                     <div class="mb-20">
                         <div class="contact-info">
                             <h6>Address</h6>
-                            <p>{{ $config->address }}</p>
+                            <p>{{ $configs->address }}</p>
                         </div>
                         <div class="contact-info">
                             <h6>Email</h6>
-                            <p>{{ $config->email }}</p>
+                            <p>{{ $configs->email }}</p>
                         </div>
                         <div class="contact-info">
                             <h6>Tel</h6>
-                            <p>{{ $config->tel }}</p>
+                            <p>{{ $configs->tel }}</p>
                         </div>
                     </div><!--contact-info-->
                 </div><!--col-sm-4-->
