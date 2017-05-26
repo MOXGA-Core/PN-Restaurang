@@ -472,11 +472,12 @@
                     <!--                            <div class="col-sm-12">-->
                     <div class="related-post-slide sq-arrow owl-carousel owl-theme">
                        @foreach($productsRand as $productRand)
+                            <?php $i = rand(0, count($productsRand)-1)  ?>
                         <div class="related-post">
                             <div class="item">
                                 <a href="#">
-                                    <img src="{{ $productRand->path }}" style="width: 335px;height: 335px;">
-                                    <span class="layer"><i>{{ $productRand->name }}</i></span>
+                                    <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 335px;height: 335px;">
+                                    <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                 </a>
                             </div>
                         </div> <!--related-post-->
@@ -491,12 +492,14 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
+
                             @foreach($productsRand as $productRand)
+                                <?php $i = rand(0, count($productsRand)-1)  ?>
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
-                                        <img src="{{ $productRand->path }}" style="width: 100px;height: 100px;">
-                                        <span class="layer"><i>{{ $productRand->name }}</i></span>
+                                        <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
+                                        <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                     </a>
                                 </div>
                             </div> <!--related-post-->
@@ -507,13 +510,14 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-                            @foreach($productsRand as $productRand)
 
+                            @foreach($productsRand as $productRand)
+                            <?php $i = rand(0, count($productsRand)-1)  ?>
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
-                                        <img src="{{ $productRand->path }}" style="width: 100px;height: 100px;">
-                                        <span class="layer"><i>{{ $productRand->name }}</i></span>
+                                        <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
+                                        <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                     </a>
                                 </div>
                             </div> <!--related-post-->

@@ -16,6 +16,7 @@ class GuestController extends Controller
         $desserts =  Product::where('category','Dessert')->orderBy('id','desc')->get();
         $drinks =   Product::where('category','Drink')->orderBy('id','desc')->get();
         $productsRand =  Product::where('category','Launch')->orderBy('id','desc')->get();
+      //  dd($productsRand[0]['attributes']['name']);
         return view('index',compact('products','configs','launchs','dinners','desserts','drinks','productsRand'));
     }
     public function promotion(){
