@@ -60,18 +60,18 @@
                         <ul class="contact-info-list">
                             <li>
                                 <i class="fa fa-map-marker"></i>
-                                {{ $config->address }}
+                                {{ $configs->address }}
                             </li>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                {{ $config->tel }}
+                                {{ $configs->tel }}
                             </li>
                             <li>
                                 <i class="fa fa-plane"></i>
-                            {{ $config->email }}
+                            {{ $configs->email }}
                             <li>
                                 <i class="fa fa-facebook"></i>
-                                {{ $config->facebook }}
+                                {{ $configs->facebook }}
                             </li>
                         </ul><!--twitter-feed-->
                     </div><!--footer-widget-->

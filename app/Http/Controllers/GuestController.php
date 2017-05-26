@@ -11,37 +11,42 @@ class GuestController extends Controller
     public function index(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('index')->with(array('config'=>$configs , 'products'=>$products));
+        $launchs =  Product::where('category','Launch')->orderBy('id','desc')->get();
+        $dinners =  Product::where('category','Dinner')->orderBy('id','desc')->get();
+        $desserts =  Product::where('category','Dessert')->orderBy('id','desc')->get();
+        $drinks =   Product::where('category','Drink')->orderBy('id','desc')->get();
+        $productsRand =  Product::where('category','Launch')->orderBy('id','desc')->get();
+        return view('index',compact('products','configs','launchs','dinners','desserts','drinks','productsRand'));
     }
     public function promotion(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('promotion')->with(array('config'=>$configs , 'products'=>$products));
+        return view('promotion',compact('products','configs'));
     }
     public function menu(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('menu')->with(array('config'=>$configs , 'products'=>$products));
+        return view('menu',compact('products','configs'));
     }
     public function reservation(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('reservation')->with(array('config'=>$configs , 'products'=>$products));
+        return view('reservation',compact('products','configs'));
     }
     public function blog(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('blog')->with(array('config'=>$configs , 'products'=>$products));
+        return view('blog',compact('products','configs'));
     }
     public function gallery(){
         $products = Product::orderBy('id','desc')->get();;
         $configs = Config::find(1);
         $categories = Category::all();
-        return view('gallery')->with(array('config'=>$configs , 'products'=>$products , 'categories'=>$categories));
+        return view('gallery',compact('products','configs','categories'));
     }
     public function contact(){
         $products = Product::all();
         $configs = Config::find(1);
-        return view('contact')->with(array('config'=>$configs , 'products'=>$products));
+        return view('contact',compact('products','configs'));
     }
 }

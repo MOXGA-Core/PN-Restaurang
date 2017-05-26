@@ -24,7 +24,7 @@
         <div  class="para-bg" data-enllax-ratio=".5" data-enllax-direction="vertical" style="background:url(assets/img/banner.png) no-repeat;"></div>
         <div class="container">
             <div class="section-heading text-center">
-                <h1 class="section-title-big"><span class="colored">Blog &amp; News</span></h1>
+                <h1 class="section-title-big"><span class="colored">Contact</span></h1>
                 <div class="divider">
                     <img src="assets/img/divider-white.png" alt="Divider Image">
                 </div>

@@ -1,3 +1,4 @@
+<?php $route = \Route::currentRouteName(); ?>
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -34,15 +35,17 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                @if (Auth::guest())
+                @else
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ url('/admin/home') }}">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="{{ url('/admin/promotion') }}">Promotion</a></li>
-                        <li><a href="{{ url('/admin/blog') }}">Blog </a></li>
-                        <li><a href="{{ url('/admin/contact') }}">Contact </a></li>
-                        <li><a href="{{ url('/admin/category') }}">Category </a></li>
+                        <li class="{{ (preg_match('/^(home.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/home') }}">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="{{ (preg_match('/^(promotion.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/promotion') }}">Promotion</a></li>
+                        <li class="{{ (preg_match('/^(blog.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/blog') }}">Blog </a></li>
+                        <li class="{{ (preg_match('/^(contact.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/contact') }}">Contact </a></li>
+                        <li class="{{ (preg_match('/^(category.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/category') }}">Category </a></li>
                     </ul>
-
+                  @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

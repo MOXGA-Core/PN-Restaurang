@@ -24,10 +24,10 @@
                     <div class="col-md-8 col-sm-8 col-xs-12 text-left">
                         <div class="top-header-left">
                             <ul class="top-contact">
-                                <li><a href="tel:{{ $config->tel }}"><i class="fa fa-microphone" aria-hidden="true"></i>Call:{{ $config->tel }}
+                                <li><a href="tel:{{ $configs->tel }}"><i class="fa fa-microphone" aria-hidden="true"></i>Call:{{ $configs->tel }}
                                     </a></li>
-                                <li><a href="mailto:{{ $config->email }}"><i class="fa fa-envelope-o"
-                                                                             aria-hidden="true"></i>Mail: {{ $config->email }}
+                                <li><a href="mailto:{{ $configs->email }}"><i class="fa fa-envelope-o"
+                                                                             aria-hidden="true"></i>Mail: {{ $configs->email }}
                                     </a></li>
                             </ul>
                         </div> <!-- top-header-left end -->
@@ -241,6 +241,7 @@
 
                         <!-- Tab navs -->
                         <ul class="food-nav" role="tablist">
+
                             <li>
                                 <a href="#fitem2" data-toggle="tab">
                                     <div class="food-nav-item">
@@ -315,22 +316,32 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            #Desset
+                                            <?php  $i = 1; ?>
+                                            @foreach($desserts as $dessert)
+                                                <?php
+                                                $i = 0;
+                                                if($i == 5){
+                                                    break;
+                                                }else{
+                                                    $i++;
+                                                }
+
+                                                ?>
                                             <li>
-                                                <a href="food.html">
+                                                <a href="#">
                                                     <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
+                                                        <img src="{{ $dessert->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
-                                                            <span class="title">VEAL MINI ESCALOPES</span>
-                                                            <span class="price">$4.3</span>
+                                                            <span class="title">{{ $dessert->name }}</span>
+                                                            <span class="price">${{ $dessert->amount }}</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
-                                                            natural sabor suave.</p>
+                                                        <p>{{ $dessert->detail }}</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
+                                            @endforeach
                                         </ul><!--food-menu-list-->
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
@@ -339,23 +350,34 @@
                             <div class="tab-pane fade" id="fitem2">
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
+
                                         <ul class="food-menu-list">
-                                            #Launch
+                                            <?php  $i = 0; ?>
+                                            @foreach($launchs as $launch)
+                                                <?php
+
+                                                if($i == 5){
+                                                    break;
+                                                }else{
+                                                    $i++;
+                                                }
+
+                                                ?>
                                             <li>
-                                                <a href="food.html">
+                                                <a href="#">
                                                     <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
+                                                        <img src="{{ $launch->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
-                                                            <span class="title">SICILIAN MEATBALLS</span>
-                                                            <span class="price">$4.3</span>
+                                                            <span class="title">{{ $launch->name }}</span>
+                                                            <span class="price">${{ $launch->amount }}</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
-                                                            natural sabor suave.</p>
+                                                        <p>{{ $launch->detail }}</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
+                                                @endforeach
                                         </ul><!--food-menu-list-->
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
@@ -365,23 +387,32 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
+                                            <?php  $i = 1; ?>
+                                            @foreach($dinners as $dinner)
+                                                <?php
+                                                $i = 0;
+                                                if($i == 5){
+                                                    break;
+                                                }else{
+                                                    $i++;
+                                                }
 
-                                           #Dinner
+                                                ?>
                                             <li>
-                                                <a href="food.html">
+                                                <a href="#">
                                                     <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
+                                                        <img src="{{ $dinner->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
-                                                            <span class="title">Beef steak</span>
-                                                            <span class="price">$4.3</span>
+                                                            <span class="title">{{ $dinner->name }}</span>
+                                                            <span class="price">${{ $dinner->amount }}</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
-                                                            natural sabor suave.</p>
+                                                        <p>{{ $dinner->detail }}</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
+                                                @endforeach
                                         </ul><!--food-menu-list-->
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
@@ -391,23 +422,32 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                           #Dink
+                                            <?php  $i = 1; ?>
+                                            @foreach($drinks as $drink)
+                                                <?php
+                                                $i = 0;
+                                                if($i == 5){
+                                                    break;
+                                                }else{
+                                                    $i++;
+                                                }
+
+                                                ?>
                                             <li>
-                                                <a href="food.html">
+                                                <a href=#">
                                                     <div class="menu-media">
-                                                        <img src="assets/img/sm.jpg" alt="Menu image">
+                                                        <img src="{{ $drink->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
-                                                            <span class="title">Beef steak</span>
-                                                            <span class="price">$4.3</span>
+                                                            <span class="title">{{ $drink->name }}</span>
+                                                            <span class="price">${{ $drink->amount }}</span>
                                                         </div>
-                                                        <p>Pan de caja con upon exquisit the combinación of de fibras en
-                                                            natural sabor suave.</p>
+                                                        <p>{{ $drink->detail }}</p>
                                                     </div><!--menu-details-->
                                                 </a>
                                             </li>
-
+                                        @endforeach
                                         </ul><!--food-menu-list-->
                                     </div>
                                 </div><!--food-menu-list-wrapper-->
@@ -431,15 +471,16 @@
                 <div class="row">
                     <!--                            <div class="col-sm-12">-->
                     <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-
+                       @foreach($productsRand as $productRand)
                         <div class="related-post">
                             <div class="item">
                                 <a href="#">
-                                    <img src="assets/img/grid5.jpg" alt="IMage">
-                                    <span class="layer"><i>Healthy Sea food</i></span>
+                                    <img src="{{ $productRand->path }}" style="width: 335px;height: 335px;">
+                                    <span class="layer"><i>{{ $productRand->name }}</i></span>
                                 </a>
                             </div>
                         </div> <!--related-post-->
+                       @endforeach
                     </div> <!--related-post-slide-->
                     <!--                            </div>-->
 
@@ -450,32 +491,33 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-
+                            @foreach($productsRand as $productRand)
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Healthy Sea food</i></span>
+                                        <img src="{{ $productRand->path }}" style="width: 100px;height: 100px;">
+                                        <span class="layer"><i>{{ $productRand->name }}</i></span>
                                     </a>
                                 </div>
                             </div> <!--related-post-->
-
+                          @endforeach
                         </div> <!--related-post-slide-->
                         <!--                            </div>-->
 
                     </div>
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
-
+                            @foreach($productsRand as $productRand)
 
                             <div class="related-post">
                                 <div class="item">
                                     <a href="#">
-                                        <img src="assets/img/grid5.jpg" alt="IMage">
-                                        <span class="layer"><i>Healthy Sea food</i></span>
+                                        <img src="{{ $productRand->path }}" style="width: 100px;height: 100px;">
+                                        <span class="layer"><i>{{ $productRand->name }}</i></span>
                                     </a>
                                 </div>
                             </div> <!--related-post-->
+                            @endforeach
                         </div> <!--related-post-slide-->
                         <!--                            </div>-->
 

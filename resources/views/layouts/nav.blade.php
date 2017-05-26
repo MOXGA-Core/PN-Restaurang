@@ -1,3 +1,4 @@
+<?php $route = \Route::currentRouteName(); ?>
 <div class="main-menu navbar-collapse collapse">
     <ul class="main-nav">
         <li>

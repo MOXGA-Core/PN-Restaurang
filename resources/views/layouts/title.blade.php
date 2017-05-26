@@ -1,6 +1,6 @@
-<title>{{ $config->name }}</title>
+<title>{{ $configs->name }}</title>
 <meta name="description" content="Restaurant">
-<meta name="keywords" content="{{ $config->keyword }}">
+<meta name="keywords" content="{{ $configs->keyword }}">
 <meta charset="utf-8">
 <meta name="author" content="MisterNT">
 <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
