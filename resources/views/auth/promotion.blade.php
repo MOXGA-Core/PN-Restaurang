@@ -7,13 +7,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Promotion
                         <div class="btn-group pull-right">
-                            <a type="button" class="btn btn-success btn-sm " href="{{ url('/admin/product') }}" style="height: 80%;height: 30px">Add Product</a>
+                            <a type="button" class="btn btn-success btn-sm " href="{{ url('/admin/product') }}" style="height: 80%;height: 30px">Upload</a>
                         </div>
                     </div>
 
                         <div class="panel-body">
 
-                </div>ydss
+                </div>
             </div>
         </div>
     </div>

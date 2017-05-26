@@ -316,10 +316,10 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <?php  $i = 1; ?>
+                                            <?php  $i = 0; ?>
                                             @foreach($desserts as $dessert)
                                                 <?php
-                                                $i = 0;
+
                                                 if($i == 5){
                                                     break;
                                                 }else{
@@ -387,10 +387,10 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <?php  $i = 1; ?>
+                                            <?php  $i = 0; ?>
                                             @foreach($dinners as $dinner)
                                                 <?php
-                                                $i = 0;
+
                                                 if($i == 5){
                                                     break;
                                                 }else{
@@ -422,10 +422,10 @@
                                 <div class="food-menu-list-wrapper">
                                     <div class="inner">
                                         <ul class="food-menu-list">
-                                            <?php  $i = 1; ?>
+                                            <?php  $i = 0; ?>
                                             @foreach($drinks as $drink)
                                                 <?php
-                                                $i = 0;
+
                                                 if($i == 5){
                                                     break;
                                                 }else{
