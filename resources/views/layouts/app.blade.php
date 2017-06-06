@@ -40,10 +40,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li class="{{ (preg_match('/^(home.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/home') }}">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="{{ (preg_match('/^(promotion.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/promotion') }}">Promotion</a></li>
-                        <li class="{{ (preg_match('/^(blog.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/blog') }}">Blog </a></li>
+                    <!--    <li class="{{ (preg_match('/^(promotion.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/promotion') }}">Promotion</a></li>
+                        <li class="{{ (preg_match('/^(blog.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/blog') }}">Blog </a></li> -->
                         <li class="{{ (preg_match('/^(contact.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/contact') }}">Contact </a></li>
                         <li class="{{ (preg_match('/^(category.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/category') }}">Category </a></li>
+                        <li class="{{ (preg_match('/^(type.).*/', $route))? 'active':'' }}"><a href="{{ url('/admin/type') }}">Type </a></li>
                     </ul>
                   @endif
                     <!-- Right Side Of Navbar -->

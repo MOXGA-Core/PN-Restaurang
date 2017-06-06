@@ -4,19 +4,19 @@
         <li>
             <a href="/">Home</a>
         </li>
-        <li>
-            <a href="promotion">Promotion</a>
-        </li>
-        <li>
-            <a href="menu">Menu</a>
-        </li>
-        <!-- <li>
-                 <a href="reservation">Reservation</a>
-             </li>
-             -->
-        <li>
-            <a href="blog">Blog</a>
-        </li>
+        <!--   <li>
+               <a href="promotion">Promotion</a>
+           </li> -->
+           <li>
+               <a href="menu">Menu</a>
+           </li>
+           <!-- <li>
+                    <a href="reservation">Reservation</a>
+                </li>
+
+           <li>
+               <a href="blog">Blog</a>
+           </li>-->
         <li>
             <a href="gallery">Gallery</a>
         </li>
