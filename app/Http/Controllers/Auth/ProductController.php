@@ -58,11 +58,11 @@ class ProductController extends Controller
         $LastInsertId = $product->id;
 
         foreach ($request->photos as $photo) {
+            $picture = new Photo();
             $filename = $photo->store('photos');
-            Photo::create([
-                'id_own' => $LastInsertId,
-                'path' => $filename
-            ]);
+            $picture->id_own = $LastInsertId;
+            $picture->path = "storage/".$filename;
+            $picture->save();
         }
         return redirect('admin/home');
     }

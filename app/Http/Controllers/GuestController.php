@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Config;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Photo;
 class GuestController extends Controller
 {
     public function index(){
@@ -25,9 +26,10 @@ class GuestController extends Controller
         return view('promotion',compact('products','configs'));
     }
     public function menu(){
+        $products1 = Product::orderBy('id','desc')->paginate(15);
         $products = Product::all();
         $configs = Config::find(1);
-        return view('menu',compact('products','configs'));
+        return view('menu',compact('products','configs','products1'));
     }
     public function reservation(){
         $products = Product::all();
@@ -51,9 +53,10 @@ class GuestController extends Controller
         return view('contact',compact('products','configs'));
     }
     public function product($id){
+        $photos  = Photo::where('id_own', $id)->get();
         $productone = Product::find($id);
         $products = Product::all();
         $configs = Config::find(1);
-        return view('single_product',compact('products','configs','productone'));
+        return view('single_product',compact('products','configs','productone','photos'));
     }
 }

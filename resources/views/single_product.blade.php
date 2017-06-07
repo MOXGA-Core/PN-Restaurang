@@ -16,7 +16,8 @@
     @include('layouts.header')
 
     <section class="page-banner">
-        <div  class="para-bg" data-enllax-ratio=".5" data-enllax-direction="vertical" style="background:url({{  URL::to('/') }}/assets/img/banner.png) no-repeat;"></div>
+        <div class="para-bg" data-enllax-ratio=".5" data-enllax-direction="vertical"
+             style="background:url({{  URL::to('/') }}/assets/img/banner.png) no-repeat;"></div>
         <div class="container">
             <div class="section-heading text-center">
                 <h1 class="section-title-big"><span class="colored">Single menu</span></h1>
@@ -34,8 +35,8 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <div class="single-menu-details">
-                        <div class="menu-images" align="center" >
-                            <img src="{{ $productone->path }}" alt="Menu IMage">
+                        <div class="menu-images" align="center">
+                            <img src="{{  URL::to('/') }}/{{ $productone->path }}" alt="Menu IMage">
                         </div><!--menu-images-->
 
                         <div class="single-menu-content">
@@ -43,28 +44,34 @@
                                 <h4>{{ $productone->name }} (Price: {{ $productone->amount }})</h4>
                             </div>
                             <div class="row">
-                            <div class="col-sm-6">
-                                <div class="related-post-slide sq-arrow owl-carousel owl-theme">
+                                <div class="col-sm-6">
 
-                                    <div class="related-post">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img src="{{ $productone->path }}" style="width: 100px;height: 100px;">
-                                                <span class="layer"><i> NAme</i></span>
-                                            </a>
-                                        </div>
-                                    </div> <!--related-post-->
+                                        <div class="related-post-slide sq-arrow owl-carousel owl-theme">
+                                            @foreach($photos as $photo)
+                                            <div class="related-post">
 
-                                </div> <!--related-post-slide-->
+                                                <div class="item">
+
+                                                    <a href="#">
+                                                        <img src="{{  URL::to('/') }}/{{ $photo->path }}"
+                                                             style="width: 100px;height: 100px;">
+                                                        <span class="layer"><i> {{ $productone->name }}</i></span>
+                                                    </a>
+
+                                                </div>
+
+                                            </div> <!--related-post-->
+                                            @endforeach
+
+                                        </div> <!--related-post-slide-->
+
                                 <!--                            </div>-->
-                            </div>
+                                </div>
                             </div>
 
                             <div class="text-desc text-center mt-5 mb-50">
                                 <p class="lh30">{{ $productone->detail }}</p>
                             </div>
-
-
 
 
                         </div><!--single-menu-content-->

@@ -25,6 +25,6 @@ class HomeController extends Controller
     {
 
         $products = Product::orderBy('id','desc')->paginate(15);
-        return view('auth.home')->with(array('products' => $products));
+        return view('auth.home',compact('products'));
     }
 }
