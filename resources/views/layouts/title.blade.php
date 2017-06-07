@@ -7,15 +7,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!-- CSS -->
+{{ Html::style('assets/css/font-awesome.min.css') }}
 <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Philosopher:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assets/css/owl.carousel.css">
-<link rel="stylesheet" href="assets/css/owl.theme.css">
-<link rel="stylesheet" href="assets/css/owl.transitions.css">
-<link rel="stylesheet" href="assets/css/main.css">
+{{ Html::style('assets/css/bootstrap.min.css') }}
+{{ Html::style('assets/css/bootstrap-datetimepicker.css') }}
+{{ Html::style('assets/css/magnific-popup.css') }}
+{{ Html::style('assets/css/owl.carousel.css') }}
+{{ Html::style('assets/css/owl.theme.css') }}
+{{ Html::style('assets/css/owl.transitions.css') }}
+{{ HTML::style('assets/css/main.css') }}

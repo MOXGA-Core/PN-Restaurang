@@ -37,7 +37,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" alt="Logo">
+                        <img src="{{  URL::to('/') }}/assets/img/logo.png" alt="Logo">
                     </a>
                 </div>
                 @include('layouts.nav')

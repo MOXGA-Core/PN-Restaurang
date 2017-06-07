@@ -50,4 +50,10 @@ class GuestController extends Controller
         $configs = Config::find(1);
         return view('contact',compact('products','configs'));
     }
+    public function product($id){
+        $productone = Product::find($id);
+        $products = Product::all();
+        $configs = Config::find(1);
+        return view('single_product',compact('products','configs','productone'));
+    }
 }

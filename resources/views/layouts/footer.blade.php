@@ -8,7 +8,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-widget footer-about text-center">
                         <div class="logo">
-                            <img src="assets/img/logo-ft.png" alt="Restaurant Logo">
+                            <img src="{{  URL::to('/') }}/assets/img/logo-ft.png" alt="Restaurant Logo">
                         </div>
                         <p>Food is like life. We have kept our experience and practice difficult for a long time. We
                             want all customers. Get pleasure and impression during the meal. With flavors that are
@@ -99,17 +99,19 @@
 
 
 <!-- Js reference -->
-<script src="assets/js/jquery.js"></script>
+
 <script type="text/javascript"
         src="http://maps.google.com/maps/api/js?key=AIzaSyAJkyG8lQ1g7gd7kVSMZfHbQlqR-PofYPc&sensor=false&amp;language=en"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/moment.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.js"></script>
-<script src="assets/js/jquery.magnific-popup.js"></script>
-<script src="assets/js/jquery.shuffle.min.js"></script>
-<script src="assets/js/jquery.videobackground.js"></script>
-<script src="assets/js/jquery.enllax.js"></script>
-<script src="assets/js/smoothscroll.js"></script>
-<script src="assets/js/owl.carousel.js"></script>
-<script src="assets/js/jquery.videobackground.js"></script>
-<script src="assets/js/scripts.js"></script>
+{{ Html::script('assets/js/jquery.js') }}
+{{ Html::script('assets/js/bootstrap.min.js') }}
+{{ Html::script('assets/js/moment.js') }}
+{{ Html::script('assets/js/bootstrap-datetimepicker.js') }}
+{{ Html::script('assets/js/jquery.magnific-popup.js') }}
+{{ Html::script('assets/js/jquery.shuffle.min.js') }}
+{{ Html::script('assets/js/jquery.videobackground.js') }}
+{{ Html::script('assets/js/jquery.enllax.js') }}
+{{ Html::script('assets/js/smoothscroll.js') }}
+{{ Html::script('assets/js/owl.carousel.js') }}
+{{ Html::script('assets/js/jquery.videobackground.js') }}
+{{ Html::script('assets/js/scripts.js') }}
+
