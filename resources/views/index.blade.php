@@ -328,7 +328,7 @@
 
                                                 ?>
                                             <li>
-                                                <a href="#">
+                                                <a href="{{ url('/product') }}/{{ $dessert->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $dessert->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
@@ -364,7 +364,7 @@
 
                                                 ?>
                                             <li>
-                                                <a href="#">
+                                                <a href="{{ url('/product') }}/{{ $launch->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $launch->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
@@ -399,7 +399,7 @@
 
                                                 ?>
                                             <li>
-                                                <a href="#">
+                                                <a href="{{ url('/product') }}/{{ $dinner->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $dinner->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
@@ -434,7 +434,7 @@
 
                                                 ?>
                                             <li>
-                                                <a href=#">
+                                                <a href="{{ url('/product') }}/{{ $drink->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $drink->path }}" style="width: 88px;height: 88px" >
                                                     </div><!--menu-media-->
@@ -475,7 +475,7 @@
                             <?php $i = rand(0, count($productsRand)-1)  ?>
                         <div class="related-post">
                             <div class="item">
-                                <a href="#">
+                                <a href="{{ url('/product') }}/{{ $i }}">
                                     <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 335px;height: 335px;">
                                     <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                 </a>
@@ -497,7 +497,7 @@
                                 <?php $i = rand(0, count($productsRand)-1)  ?>
                             <div class="related-post">
                                 <div class="item">
-                                    <a href="#">
+                                    <a href="{{ url('/product') }}/{{ $i }}">
                                         <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
                                         <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                     </a>
@@ -515,7 +515,7 @@
                             <?php $i = rand(0, count($productsRand)-1)  ?>
                             <div class="related-post">
                                 <div class="item">
-                                    <a href="#">
+                                    <a href="{{ url('/product') }}/{{ $i }}">
                                         <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
                                         <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
                                     </a>

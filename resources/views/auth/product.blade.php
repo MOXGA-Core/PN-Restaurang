@@ -58,9 +58,15 @@
                                 </div>
                                 <br>
                                 <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Picture</span>
+                                    <span class="input-group-addon" id="basic-addon1">Poster</span>
                                     <input type="file" name="picture" class="form-control"
                                            aria-describedby="basic-addon1">
+                                </div>
+                                <br>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Picture</span>
+                                    <input type="file" name="photos[]" class="form-control"
+                                           aria-describedby="basic-addon1" multiple >
                                 </div>
                                 <br>
                                 <div class="btn-group">

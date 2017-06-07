@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Type;
+use App\Models\Photo;
 class ProductController extends Controller
 {
     /**
@@ -54,6 +55,15 @@ class ProductController extends Controller
         $product->detail = $request->detail;
         $product->amount = $request->amount;
         $product->save();
+        $LastInsertId = $product->id;
+
+        foreach ($request->photos as $photo) {
+            $filename = $photo->store('photos');
+            Photo::create([
+                'id_own' => $LastInsertId,
+                'path' => $filename
+            ]);
+        }
         return redirect('admin/home');
     }
 
