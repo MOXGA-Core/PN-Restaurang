@@ -36,6 +36,16 @@
                                 </div>
                                 <br>
                                 <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">Type</span>
+                                    <select name="type" class="form-control">
+                                        @foreach($types as $type)
+                                            <option value="{{ $type->type }}">{{ $type->type }}</option>
+                                        @endforeach
+                                    </select>
+
+                                </div>
+                                <br>
+                                <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Tag</span>
                                     <input type="text" name="tag" class="form-control" placeholder="pomotion,"
                                            aria-describedby="basic-addon1">

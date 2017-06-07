@@ -31,9 +31,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Category
+                    <div class="panel-heading">Types
                         <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-success btn-sm "  data-toggle="modal" data-target="#myModal" style="height: 80%;height: 30px">Add Category</button>
+                            <button type="button" class="btn btn-success btn-sm "  data-toggle="modal" data-target="#myModal" style="height: 80%;height: 30px">Add Type</button>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
 
                             <tr>
                                 <th>#</th>
-                                <th>Category</th>
+                                <th>Type</th>
                                 <th></th>
                             </tr>
                             @foreach ($types as $type)

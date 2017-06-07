@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Type;
 class ProductController extends Controller
 {
     /**
@@ -22,8 +23,8 @@ class ProductController extends Controller
     public function index()
     {
         $categories = Category::all();
-
-        return view('auth.product')->with('categories', $categories);
+        $types = Type::all();
+        return view('auth.product',compact('categories','types'));
     }
 
     /**
