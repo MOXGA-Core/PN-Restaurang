@@ -24,7 +24,9 @@
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function() {
                 var div = this.parentElement;
-                div.style.display = "none";
+               // div.style.display = "none";
+                div.remove();
+
             }
         }
 
@@ -48,6 +50,7 @@
             if (inputValue === '') {
                 alert("You must write something!");
             } else {
+
                 var input = document.createElement("input");
 
                 input.setAttribute("type", "hidden");
@@ -56,8 +59,10 @@
 
                 input.setAttribute("value", inputValue);
 
+                var x = document.getElementById("TypeValue");
+                x.remove(x.selectedIndex);
                 document.getElementById("myUL").appendChild(li);
-                document.getElementById("myUL").appendChild(input);
+                li.appendChild(input);
             }
             document.getElementById("myInput").value = "";
 
@@ -70,7 +75,8 @@
             for (i = 0; i < close.length; i++) {
                 close[i].onclick = function() {
                     var div = this.parentElement;
-                    div.style.display = "none";
+                   // div.style.display = "none";
+                    div.remove();
                 }
             }
         }

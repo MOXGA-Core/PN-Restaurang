@@ -1,15 +1,4 @@
 <?php
-use App\Models\TempPrice;
-
-Route::get('/test',function (){
-    $arr_tojson = array(
-        'dt' => 1,
-        'dt2' => 2,
-    );
-    $arr_tojson = json_encode($arr_tojson);
-    TempPrice::create(['value' => $arr_tojson]);
-});
-
 
 /*
 |--------------------------------------------------------------------------

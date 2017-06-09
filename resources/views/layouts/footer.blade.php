@@ -33,17 +33,18 @@
                         <h4 class="footer-widget-title">Gallery</h4>
                         <ul class="instagram-list">
                            <?php
+                            $j = 0;
                             if($products->count() < 9){
                             $j = $products->count();
                             }
                             if($products->count() >= 9){
                             $j = 9;
                             }
-                            for($i=1;$i <= $j ;$i++){
+                            for($i=0;$i < $j ;$i++){
                             ?>
 
                              <li>
-                                <a href="#"><img src="{{ $products[$i]['attributes']['path'] }}" width="70px" height="70px" alt="Image"></a>
+                                <a href="#"><img src="{{  URL::to('/') }}/{{ $products[$i]['attributes']['path'] }}" width="70px" height="70px" alt="Image"></a>
                              </li>
 
                            <?php
