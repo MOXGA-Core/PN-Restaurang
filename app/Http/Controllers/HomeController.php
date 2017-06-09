@@ -27,4 +27,12 @@ class HomeController extends Controller
         $products = Product::orderBy('id','desc')->paginate(15);
         return view('auth.home',compact('products'));
     }
+    public function AddLocal()
+    {
+        $postdata = "123456";
+        $myfile = time().str_random();
+
+        Storage::disk('local')->put($myfile, $postdata);
+        dd($myfile);
+    }
 }

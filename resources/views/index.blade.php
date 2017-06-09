@@ -186,9 +186,6 @@
                         all customers. Get pleasure and impression during the meal. With flavors that are meticulously
                         cooked.
 
-                        <div>
-                            <a href="#" class="btn-primary mt-50 mb-30">Learn More</a>
-                        </div>
                     </div>
 
                 </div>

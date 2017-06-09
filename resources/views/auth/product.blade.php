@@ -19,12 +19,7 @@
                                            aria-describedby="basic-addon1">
                                 </div>
                                 <br>
-                                <div class="input-group">
-                                    <span class="input-group-addon" id="basic-addon1">Amount</span>
-                                    <input type="number" name="amount" class="form-control" placeholder="0.00"
-                                           aria-describedby="basic-addon1">
-                                </div>
-                                <br>
+
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Category</span>
                                     <select name="category" class="form-control">
@@ -35,15 +30,32 @@
 
                                 </div>
                                 <br>
-                                <div class="input-group">
+                                <div>
+                                    <div class="col-md-5">
+                                    <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Type</span>
                                     <select name="type" class="form-control">
                                         @foreach($types as $type)
                                             <option value="{{ $type->type }}">{{ $type->type }}</option>
                                         @endforeach
                                     </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Price</span>
+                                        <input type="number" name="amount[]" class="form-control" placeholder="0.00"
+                                               aria-describedby="basic-addon1">
+                                    </div>
+                                    </div>
+
+
+                                            <a>Add</a>
+
 
                                 </div>
+
+                                <br>
                                 <br>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">Tag</span>
