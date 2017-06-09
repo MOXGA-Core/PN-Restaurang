@@ -46,6 +46,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $arr_tojson = array(
+            'dt' => 1,
+            'dt2' => 2,
+        );
+        $arr_tojson = json_encode($arr_tojson);
+
         $path = $request->file('picture')->store('images/product');
         $product = new Product();
         $product->name = $request->name;
@@ -53,7 +59,8 @@ class ProductController extends Controller
         $product->category = $request->category;
         $product->tag = $request->tag;
         $product->detail = $request->detail;
-        $product->amount = $request->amount;
+        //$product->amount = $request->amount;
+        $product->value =$arr_tojson;
         $product->save();
         $LastInsertId = $product->id;
 

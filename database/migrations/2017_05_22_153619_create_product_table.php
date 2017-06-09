@@ -20,6 +20,7 @@ class CreateProductTable extends Migration
             $table->string('path',655);
             $table->string('category',255);
             $table->text('tag');
+            $table->text('value');
             $table->text('detail');
             $table->timestamps();
         });
