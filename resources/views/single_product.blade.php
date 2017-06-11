@@ -2,6 +2,15 @@
 <html>
 <head>
     @include('layouts.title')
+
+
+    <script>
+        function SetPrice(value){
+        var s= document.getElementById('price');
+        s.innerHTML  = value;
+        }
+    </script>
+
 </head>
 <body>
 <!--Preloader-->
@@ -29,6 +38,8 @@
     </section>
     <!-- page-banner -->
 
+
+
     <!--main blog-->
     <section class="main-blog page-section-wrapper bg-light">
         <div class="container">
@@ -36,12 +47,21 @@
                 <div class="col-sm-10 col-sm-offset-1">
                     <div class="single-menu-details">
                         <div class="menu-images" align="center">
-                            <img src="{{  URL::to('/') }}/{{ $productone->path }}" alt="Menu IMage">
+                            <img class="modal-img" src="{{  URL::to('/') }}/{{ $productone->path }}" alt="Menu IMage">
                         </div><!--menu-images-->
 
                         <div class="single-menu-content">
                             <div class="menu-title">
-                                <h4>{{ $productone->name }} (Price: {{ $productone->amount }})</h4>
+                                <h4>{{ $productone->name }} (Price: <b id="price">{{ current($prices) }}</b>)</h4>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Type</span>
+                                <select name="types" class="form-control" id="types" onchange="SetPrice(this.value);">
+                                @foreach($prices as $key => $price)
+                                    <option value="{{ $price }}">{{ $key  }}</option>
+                                @endforeach
+                            </select>
+
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -53,7 +73,7 @@
                                                 <div class="item">
 
                                                     <a href="#">
-                                                        <img src="{{  URL::to('/') }}/{{ $photo->path }}"
+                                                        <img  src="{{  URL::to('/') }}/{{ $photo->path }}"
                                                              style="width: 100px;height: 100px;">
                                                         <span class="layer"><i> {{ $productone->name }}</i></span>
                                                     </a>

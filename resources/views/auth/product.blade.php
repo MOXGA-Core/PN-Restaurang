@@ -47,7 +47,7 @@
 
             li.appendChild(t);
 
-            if (inputValue === '') {
+            if (inputValue === '' || TypeValue === '') {
                 alert("You must write something!");
             } else {
 

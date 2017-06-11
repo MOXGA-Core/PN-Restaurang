@@ -57,6 +57,8 @@ class GuestController extends Controller
         $productone = Product::find($id);
         $products = Product::all();
         $configs = Config::find(1);
-        return view('single_product',compact('products','configs','productone','photos'));
+        $prices = json_decode($productone->price, true);
+      //  dd($prices);
+        return view('single_product',compact('products','configs','productone','photos','prices'));
     }
 }
