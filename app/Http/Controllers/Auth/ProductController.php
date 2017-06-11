@@ -83,7 +83,11 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $types = Type::all();
+        $productone = Product::find($id);
+        $categories = Category::all();
+        $prices = json_decode($productone->price, true);
+        return view('auth.product_show',compact('productone','categories','types','prices'));
     }
 
     /**
@@ -94,7 +98,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+
+
     }
 
     /**
@@ -106,7 +111,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        foreach ($request->prices as $key => $price){
+            $arr_tojson[$key] = $price;
+        }
+
+        $arr_tojson = json_encode($arr_tojson);
+
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->category = $request->category;
+        $product->tag = $request->tag;
+        $product->detail = $request->detail;
+        $product->price =$arr_tojson;
+        $product->save();
+        return redirect('admin/home');
     }
 
     /**

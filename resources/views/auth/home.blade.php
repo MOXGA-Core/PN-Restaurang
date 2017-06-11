@@ -20,7 +20,7 @@
                         <p><b>{{ $product->name }}</b></p>
                         <p> {{ $product->detail }}</p>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-warning">Edit</button>
+                            <a  href="{{ url('/admin/product/'.$product->id) }}" class="btn btn-warning">Edit</a>
                         </div>
                         <form id="form{{ $product->id }}" action="{{ url('/admin/product/'.$product->id) }}" method="post" style="display: none;">
                             {{ method_field('delete') }}

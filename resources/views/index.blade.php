@@ -322,7 +322,7 @@
                                                 }else{
                                                     $i++;
                                                 }
-
+                                                    $prices = json_decode($dessert->price, true);
                                                 ?>
                                             <li>
                                                 <a href="{{ url('/product') }}/{{ $dessert->id }}">
@@ -332,7 +332,7 @@
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $dessert->name }}</span>
-                                                            <span class="price">${{ $dessert->amount }}</span>
+                                                            <span class="price"> @foreach($prices as $key => $price) ${{ $price }} , @endforeach ...</span>
                                                         </div>
                                                         <p>{{ $dessert->detail }}</p>
                                                     </div><!--menu-details-->
@@ -358,7 +358,7 @@
                                                 }else{
                                                     $i++;
                                                 }
-
+                                                    $prices = json_decode($launch->price, true);
                                                 ?>
                                             <li>
                                                 <a href="{{ url('/product') }}/{{ $launch->id }}">
@@ -368,7 +368,7 @@
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $launch->name }}</span>
-                                                            <span class="price">${{ $launch->amount }}</span>
+                                                            <span class="price"> @foreach($prices as $key => $price) ${{ $price }} , @endforeach ...</span>
                                                         </div>
                                                         <p>{{ $launch->detail }}</p>
                                                     </div><!--menu-details-->
@@ -393,7 +393,7 @@
                                                 }else{
                                                     $i++;
                                                 }
-
+                                                    $prices = json_decode($dinner->price, true);
                                                 ?>
                                             <li>
                                                 <a href="{{ url('/product') }}/{{ $dinner->id }}">
@@ -403,7 +403,7 @@
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $dinner->name }}</span>
-                                                            <span class="price">${{ $dinner->amount }}</span>
+                                                            <span class="price"> @foreach($prices as $key => $price) ${{ $price }} , @endforeach ...</span>
                                                         </div>
                                                         <p>{{ $dinner->detail }}</p>
                                                     </div><!--menu-details-->
@@ -428,7 +428,7 @@
                                                 }else{
                                                     $i++;
                                                 }
-
+                                                    $prices = json_decode($dinner->$drink, true);
                                                 ?>
                                             <li>
                                                 <a href="{{ url('/product') }}/{{ $drink->id }}">
@@ -438,7 +438,7 @@
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $drink->name }}</span>
-                                                            <span class="price">${{ $drink->amount }}</span>
+                                                            <span class="price"> @foreach($prices as $key => $price) ${{ $price }} , @endforeach ...</span>
                                                         </div>
                                                         <p>{{ $drink->detail }}</p>
                                                     </div><!--menu-details-->
@@ -469,12 +469,12 @@
                     <!--                            <div class="col-sm-12">-->
                     <div class="related-post-slide sq-arrow owl-carousel owl-theme">
                        @foreach($productsRand as $productRand)
-                            <?php $i = rand(0, count($productsRand)-1)  ?>
+
                         <div class="related-post">
                             <div class="item">
-                                <a href="{{ url('/product') }}/{{ $i }}">
-                                    <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 335px;height: 335px;">
-                                    <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
+                                <a href="{{ url('/product') }}/{{  $productRand->id }}">
+                                    <img src="{{ $productRand->path }}" style="width: 335px;height: 335px;">
+                                    <span class="layer"><i>{{  $productRand->name  }}</i></span>
                                 </a>
                             </div>
                         </div> <!--related-post-->
@@ -490,13 +490,13 @@
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
 
-                            @foreach($productsRand as $productRand)
-                                <?php $i = rand(0, count($productsRand)-1)  ?>
+                            @foreach($products as $product)
+
                             <div class="related-post">
                                 <div class="item">
-                                    <a href="{{ url('/product') }}/{{ $i }}">
-                                        <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
-                                        <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
+                                    <a href="{{ url('/product') }}/{{ $product->id }}">
+                                        <img src="{{ $product->path }}" style="width: 100px;height: 100px;">
+                                        <span class="layer"><i>{{ $product->name }}</i></span>
                                     </a>
                                 </div>
                             </div> <!--related-post-->
@@ -508,16 +508,16 @@
                     <div class="col-sm-6">
                         <div class="related-post-slide sq-arrow owl-carousel owl-theme">
 
-                            @foreach($productsRand as $productRand)
-                            <?php $i = rand(0, count($productsRand)-1)  ?>
-                            <div class="related-post">
-                                <div class="item">
-                                    <a href="{{ url('/product') }}/{{ $i }}">
-                                        <img src="{{ $productsRand[$i]['attributes']['path'] }}" style="width: 100px;height: 100px;">
-                                        <span class="layer"><i>{{ $productsRand[$i]['attributes']['name'] }}</i></span>
-                                    </a>
-                                </div>
-                            </div> <!--related-post-->
+                            @foreach($products as $product)
+
+                                <div class="related-post">
+                                    <div class="item">
+                                        <a href="{{ url('/product') }}/{{ $product->id }}">
+                                            <img src="{{ $product->path }}" style="width: 100px;height: 100px;">
+                                            <span class="layer"><i>{{ $product->name }}</i></span>
+                                        </a>
+                                    </div>
+                                </div> <!--related-post-->
                             @endforeach
                         </div> <!--related-post-slide-->
                         <!--                            </div>-->
@@ -676,95 +676,6 @@
          section-carousel
     =======-->
 
-    <!--=====
-         section-blog
-    =======-->
-    <section class="section-blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading text-center mb-75">
-                        <h2 class="section-title"><span class="colored">Latest Blog &amp; News</span></h2>
-                        <div class="divider">
-                            <img src="assets/img/divider.png" alt="Divider Image">
-                        </div>
-                    </div><!--section-heading-->
-                </div>
-            </div><!--row-->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="blog-post-wrapper">
-                        <article class="blog-post">
-                            <div class="post-date">
-                                <span>09</span>
-                                <span class="month">Nov</span>
-                            </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
-                                    Freaking Out</a></h5>
-                            <ul class="blog-post-meta">
-                                <li><i class="fa fa-comments-o"></i>17</li>
-                                <li><i class="fa fa-eye"></i>17</li>
-                                <li><i class="fa fa-bookmark-o"></i>food, travel</li>
-                            </ul>
-                            <div class="text-block">
-                                <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
-                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
-                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
-                                        voluptatem accusantium dolorea nor udantium.</p>
-                                </div>
-                            </div>
-                        </article><!--blog-post-->
-                        <article class="blog-post">
-                            <div class="post-date">
-                                <span>09</span>
-                                <span class="month">Nov</span>
-                            </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
-                                    Freaking Out</a></h5>
-                            <ul class="blog-post-meta">
-                                <li><i class="fa fa-comments-o"></i>17</li>
-                                <li><i class="fa fa-eye"></i>17</li>
-                                <li><i class="fa fa-bookmark-o"></i>food, travel</li>
-                            </ul>
-                            <div class="text-block">
-                                <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
-                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
-                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
-                                        voluptatem accusantium dolorea nor udantium.</p>
-                                </div>
-                            </div>
-                        </article><!--blog-post-->
-                        <article class="blog-post">
-                            <div class="post-date">
-                                <span>09</span>
-                                <span class="month">Nov</span>
-                            </div>
-                            <h5 class="title"><a href="#">In-N-Out Is Running Out Of Yellow Chilies And Everyone Is
-                                    Freaking Out</a></h5>
-                            <ul class="blog-post-meta">
-                                <li><i class="fa fa-comments-o"></i>17</li>
-                                <li><i class="fa fa-eye"></i>17</li>
-                                <li><i class="fa fa-bookmark-o"></i>food, travel</li>
-                            </ul>
-                            <div class="text-block">
-                                <div class="inner">
-                                    <p>Sed ut perspiciatis unde omnis iste natus to it error sit too voluptatem
-                                        accusantium dolorea nor udantium, totam for aperiam, ipsa too quae aend ab illo
-                                        inventore to end. Sed ut perspiciatis unde omnis iste natus to it error sit too
-                                        voluptatem accusantium dolorea nor udantium.</p>
-                                </div>
-                            </div>
-                        </article><!--blog-post-->
-                    </div><!--blog-post-wrapper-->
-                </div>
-            </div><!--row-->
-        </div><!--container-->
-    </section>
-    <!--=====
-         section-blog
-    =======-->
 
 
 @extends('layouts.footer')

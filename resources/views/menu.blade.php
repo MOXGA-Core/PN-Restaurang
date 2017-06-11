@@ -63,6 +63,9 @@
                                     <div class="inner">
                                         <ul class="food-menu-list">
                                                    @foreach($products1 as $product)
+                                                       <?php
+                                                $prices = json_decode($product->price, true);
+                                                ?>
                                             <li>
                                                 <a href="{{ url('/product') }}/{{ $product->id }}">
                                                     <div class="menu-media">
@@ -71,7 +74,7 @@
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $product->name }}</span>
-                                                            <span class="price">${{ $product->amount }}</span>
+                                                            <span class="price"> @foreach($prices as $key => $price) ${{ $price }} , @endforeach ...</span>
                                                         </div>
                                                         <p>{{ $product->detail }}</p>
                                                     </div><!--menu-details-->

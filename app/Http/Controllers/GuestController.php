@@ -42,7 +42,7 @@ class GuestController extends Controller
         return view('blog',compact('products','configs'));
     }
     public function gallery(){
-        $products = Product::orderBy('id','desc')->get();;
+        $products = Product::orderBy('id','desc')->get();
         $configs = Config::find(1);
         $categories = Category::all();
         return view('gallery',compact('products','configs','categories'));
