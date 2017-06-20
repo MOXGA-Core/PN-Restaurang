@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
@@ -9,9 +10,10 @@ class UserTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        $user = new \App\Models\User();
+    public function run() {
+        User::truncate();
+
+        $user = new User();
         $user->name = 'Admin';
         $user->email = 'admin@gmail.com';
         $user->password = bcrypt('123456');

@@ -1,16 +1,15 @@
+@push('stylesheet')
+<style>
+    .food-menu-list-wrapper {
+        max-height: 765px;
+        overflow-y: auto;
+    }
+</style>
+@endpush
 <section class="section-food-menu bg-fixed">
     <div class="container">
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-heading text-center mb-75">
-                    <h2 class="section-title"><span class="colored">Our food menu</span></h2>
-                    <div class="divider">
-                        <img src="assets/img/divider-white.png" alt="Divider Image">
-                    </div>
-                </div><!--section-heading-->
-            </div>
-        </div><!--row-->
+        @include('frontend.layouts.title', ['title' => 'Our food menu', 'white' => true])
 
         <div class="row">
             <div class="col-md-12">
@@ -18,7 +17,7 @@
 
                     <!-- Tab navs -->
                     <ul class="food-nav" role="tablist">
-                        <li>
+                        <li class="active">
                             <a href="#fitem2" data-toggle="tab">
                                 <div class="food-nav-item">
                                     <div class="nav-icon">
@@ -48,7 +47,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="#fitem1" data-toggle="tab">
                                 <div class="food-nav-item">
                                     <div class="nav-icon">
@@ -84,326 +83,102 @@
                             <div class="food-menu-list-wrapper">
                                 <div class="inner">
                                     <ul class="food-menu-list">
+                                        @foreach($courses[0]->products as $product)
                                         <li>
-
-                                            <a href="food.html">
+                                            <a href="#.">
                                                 <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
+                                                    <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
                                                 </div><!--menu-media-->
                                                 <div class="menu-details">
                                                     <div class="heading clearfix">
-                                                        <span class="title">Beef steak</span>
-                                                        <span class="price">$4.3</span>
+                                                        <span class="title">{{ $product->name }}</span>
+                                                        @foreach($product->prices as $price)
+                                                            <span class="price">{{ $price->price }} Kr</span>
+                                                        @endforeach
                                                     </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
+                                                    <p>{{ $product->detail }}</p>
+                                                </div>
                                             </a>
                                         </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SICILIAN MEATBALLS</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">ROASTED DUCK LEG</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">OCTOPUS</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">VEAL MINI ESCALOPES</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                    </ul><!--food-menu-list-->
+                                        @endforeach
+                                    </ul>
                                 </div>
-                            </div><!--food-menu-list-wrapper-->
-                        </div><!--tab-pane-->
+                            </div>
+                        </div>
                         <div class="tab-pane fade" id="fitem2">
                             <div class="food-menu-list-wrapper">
                                 <div class="inner">
                                     <ul class="food-menu-list">
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">GRILLED FISH</span>
-                                                        <span class="price">$4.3</span>
+                                        @foreach($courses[1]->products as $product)
+                                            <li>
+                                                <a href="#.">
+                                                    <div class="menu-media">
+                                                        <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
+                                                    </div><!--menu-media-->
+                                                    <div class="menu-details">
+                                                        <div class="heading clearfix">
+                                                            <span class="title">{{ $product->name }}</span>
+                                                            @foreach($product->prices as $price)
+                                                                <span class="price">{{ $price->price }} Kr</span>
+                                                            @endforeach
+                                                        </div>
+                                                        <p>{{ $product->detail }}</p>
                                                     </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">MUSSELS SOUP</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SMOKED TROUT</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">VENISON CONFIT</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SICILIAN MEATBALLS</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                    </ul><!--food-menu-list-->
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </div>
-                            </div><!--food-menu-list-wrapper-->
-                        </div><!--tab-pane-->
+                            </div>
+                        </div>
                         <div class="tab-pane fade" id="fitem3">
                             <div class="food-menu-list-wrapper">
                                 <div class="inner">
                                     <ul class="food-menu-list">
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">STUFFED STRAWBERRY</span>
-                                                        <span class="price">$4.3</span>
+                                        @foreach($courses[2]->products as $product)
+                                            <li>
+                                                <a href="#.">
+                                                    <div class="menu-media">
+                                                        <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
+                                                    </div><!--menu-media-->
+                                                    <div class="menu-details">
+                                                        <div class="heading clearfix">
+                                                            <span class="title">{{ $product->name }}</span>
+                                                            @foreach($product->prices as $price)
+                                                                <span class="price">{{ $price->price }} Kr</span>
+                                                            @endforeach
+                                                        </div>
+                                                        <p>{{ $product->detail }}</p>
                                                     </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SICILIAN MEATBALLS</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">ROAST CHICKEN</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">Beef steak</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">Beef steak</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div>
-                                            </a>
-                                        </li>
+                                                </a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
-                        </div><
+                        </div>
                         <div class="tab-pane fade" id="fitem4">
                             <div class="food-menu-list-wrapper">
                                 <div class="inner">
                                     <ul class="food-menu-list">
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SICILIAN MEATBALLS</span>
-                                                        <span class="price">$4.3</span>
+                                        @foreach($courses[3]->products as $product)
+                                            <li>
+                                                <a href="#.">
+                                                    <div class="menu-media">
+                                                        <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
+                                                    </div><!--menu-media-->
+                                                    <div class="menu-details">
+                                                        <div class="heading clearfix">
+                                                            <span class="title">{{ $product->name }}</span>
+                                                            @foreach($product->prices as $price)
+                                                                <span class="price">{{ $price->price }} Kr</span>
+                                                            @endforeach
+                                                        </div>
+                                                        <p>{{ $product->detail }}</p>
                                                     </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">SEAFOOD SALAD</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div><!--menu-media-->
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">ITALIAN SPAGHETTI</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div><!--menu-details-->
-                                            </a>
-                                        </li>
-                                        <li>
-
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div>
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">STUFFED STRAWBERRY</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="food.html">
-                                                <div class="menu-media">
-                                                    <img src="assets/img/sm.jpg" alt="Menu image">
-                                                </div>
-                                                <div class="menu-details">
-                                                    <div class="heading clearfix">
-                                                        <span class="title">Beef steak</span>
-                                                        <span class="price">$4.3</span>
-                                                    </div>
-                                                    <p>Pan de caja con upon exquisit the combinación of de fibras en natural sabor suave.</p>
-                                                </div>
-                                            </a>
-                                        </li>
+                                                </a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>

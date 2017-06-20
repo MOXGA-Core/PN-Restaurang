@@ -1,7 +1,7 @@
 <head>
     <title>@yield('title', 'Welcome') | PN Restaurang</title>
     <meta name="description" content="Restaurant">
-    <meta name="keywords" content="{{ $configs->keyword }}">
+    <meta name="keywords" content="restaurang">
     <meta charset="utf-8">
     <meta name="author" content="MisterNT">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -21,4 +21,6 @@
     {{ Html::style('assets/css/owl.theme.css') }}
     {{ Html::style('assets/css/owl.transitions.css') }}
     {{ HTML::style('assets/css/main.css') }}
+
+    @stack('stylesheet')
 </head>

@@ -1,36 +1,18 @@
 @extends('frontend.layouts.app')
 
+@push('stylesheet')
+<style>
+    .reservation-hours {
+        display: block;
+    }
+    .reservation-hours > .reserve-time {
+        display: inline-block;
+    }
+</style>
+@endpush
+
 @section('content')
-    <section class="section-banner">
-        <div class="banner-slider circle-arrow owl-carousel owl-theme">
-            <div class="item">
-                <img src="{{ asset('assets/img/banner.png') }}" alt="Banner image">
-
-                <div class="banner-content">
-                    <div class="container">
-                        <h1 class="title">Välkomna</h1>
-                        <p class="sub-title">Phou Nam Thai Restaurang & Take Away</p>
-                        <div>
-                            <img src="assets/img/badge.png" alt="iMAGE">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/img/banner.png" alt="Banner image">
-
-                <div class="banner-content">
-                    <div class="container">
-                        <h1 class="title">Food is taste of life</h1>
-                        <p class="sub-title">Love of beauty is taste. The creation of beauty is art.</p>
-                        <div>
-                            <img src="assets/img/badge.png" alt="iMAGE">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('frontend.home.sections.banner')
 
     <section class="section-opening-hours">
         <div class="opening-hours-block">
@@ -40,7 +22,7 @@
                         <p class="big-text ff-philo light mt-50 mb-25">MY KITCHEN: Taste of Norrtälje</p>
                     </div>
                     <div class="col-md-8">
-                        <div class="reservation-hours">
+                        <div class="reservation-hours text-right">
                             <div class="reserve-time">
                                 <span class="days">Monday - Friday</span >
                                 <span class="time">10:30 - 21:00</span>
@@ -49,10 +31,55 @@
                                 <span class="days">Saturday - Sunday</span >
                                 <span class="time">12:00 - 21:00</span>
                             </div>
-                        </div><
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    @include('frontend.home.sections.promotions')
+
+    @include('frontend.home.sections.products')
+
+    <section class="section-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-heading text-center mb-25 mt-85">
+                        <h1 class="section-title-big"><span class="colored">Phou & Nam</span><br/> Chef</h1>
+                        <div class="divider">
+                            <img src="assets/img/divider.png" alt="Divider Image">
+                        </div>
+                    </div>
+
+                    <div class="intro-text-block text-center lh30">
+                        Food is like life. We have kept our experience and practice difficult for a long time. We want all customers. Get pleasure and impression during the meal. With flavors that are meticulously cooked.
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <figure class="img-wrapper">
+                        <img src="assets/img/phou.png" alt="Image">
+                        <div class="border-frame">
+                            <img src="assets/img/corner-left.png" alt="image" class="corner-left">
+                            <img src="assets/img/corner-right.png" alt="image" class="corner-right">
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <figure class="img-wrapper">
+                        <img src="assets/img/nam.png" alt="Image">
+                        <div class="border-frame">
+                            <img src="assets/img/corner-left.png" alt="image" class="corner-left">
+                            <img src="assets/img/corner-right.png" alt="image" class="corner-right">
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @include('frontend.home.sections.contact')
 @endsection
