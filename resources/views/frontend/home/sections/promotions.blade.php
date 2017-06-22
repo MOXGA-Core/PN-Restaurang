@@ -1,5 +1,5 @@
 @if($promotion)
-    <section class="section-intro">
+    <section class="section-intro" id="promotion">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-md-push-7">

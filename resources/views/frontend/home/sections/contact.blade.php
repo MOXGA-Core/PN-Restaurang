@@ -1,4 +1,4 @@
-<section class="section-contact">
+<section class="section-contact" id="contact">
     @include('frontend.layouts.title', ['title' => 'Contact Us', 'white' => true])
 
     <div class="container">

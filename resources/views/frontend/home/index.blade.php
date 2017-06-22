@@ -42,7 +42,7 @@
 
     @include('frontend.home.sections.products')
 
-    <section class="section-intro">
+    <section class="section-intro" id="chef">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -83,3 +83,17 @@
 
     @include('frontend.home.sections.contact')
 @endsection
+
+@push('javascript')
+<script>
+    $(function() {
+        $(".main-menu a").click(function(e) {
+            e.preventDefault();
+            var aTag = $('section' + $(this).attr('href'));
+            if(aTag.length) {
+                $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+            }
+        });
+    });
+</script>
+@endpush

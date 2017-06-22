@@ -4,7 +4,8 @@ namespace App\Providers;
 
 use App\Models\Contact;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
+use Schema;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,8 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $contact = Contact::first();
-        if($contact) {
+
+        if(Schema::hasTable('contacts')) {
+            $contact = Contact::first();
             view()->share('contact', $contact);
         }
         Schema::defaultStringLength(191);

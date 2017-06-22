@@ -1,4 +1,4 @@
-<section class="section-banner">
+<section class="section-banner" id="home">
     <div class="banner-slider circle-arrow owl-carousel owl-theme">
         <div class="item">
             <img src="assets/img/badge.png" alt="Banner image">

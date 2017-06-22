@@ -37,16 +37,21 @@
                 <div class="main-menu navbar-collapse collapse">
                     <ul class="main-nav">
                         <li>
-                            <a href="{{ url('/') }}">Home</a>
+                            <a href="#home">Home</a>
                         </li>
+                        @if($promotion)
+                            <li>
+                                <a href="#promotion">Promotion</a>
+                            </li>
+                        @endif
                         <li>
                             <a href="#menu">Menu</a>
                         </li>
                         <li>
-                            <a href="#gallery">Gallery</a>
+                            <a href="#chef">Chefs</a>
                         </li>
                         <li>
-                            <a href="{{ url('/contact') }}">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                         <li><a href="#" class="btn-search"><i class="fa fa-search"></i></a></li>
                     </ul>

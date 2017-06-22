@@ -6,7 +6,7 @@
     }
 </style>
 @endpush
-<section class="section-food-menu bg-fixed">
+<section class="section-food-menu bg-fixed" id="menu">
     <div class="container">
 
         @include('frontend.layouts.title', ['title' => 'Our food menu', 'white' => true])
