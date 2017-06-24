@@ -94,7 +94,7 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAJkyG8lQ1g7gd7kVSMZfHbQlqR-PofYPc&sensor=false&amp;language=en"></script>
 {{ Html::script('assets/js/jquery.js') }}
 {{ Html::script('assets/js/bootstrap.min.js') }}
-{{ Html::script('assets/js/moment.js') }}
+{{ Html::script('assets/js/Moment.js') }}
 {{ Html::script('assets/js/bootstrap-datetimepicker.js') }}
 {{ Html::script('assets/js/jquery.magnific-popup.js') }}
 {{ Html::script('assets/js/jquery.shuffle.min.js') }}
