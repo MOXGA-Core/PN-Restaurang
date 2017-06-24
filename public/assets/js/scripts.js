@@ -238,7 +238,7 @@
                 google.maps.event.addDomListener(window, 'load', init);
         }	
 		function init() {
-		var myLatlng = new google.maps.LatLng(23.823824, 90.364351);//Add your Latitude longitude Value here to change map location
+		var myLatlng = new google.maps.LatLng(59.7540014, 18.6890914);//Add your Latitude longitude Value here to change map location
 		var maptooltipbold = 'ThemeEver';
 		var maptooltip = 'You can add your content here';  
 		//---------------------------------------------------------//
