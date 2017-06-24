@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Requests\Backend\ProductRequest;
 use App\Models\Course;
 use App\Models\Material;
+use App\Models\Photo;
 use App\Models\Price;
 use App\Models\Product;
 use App\Models\Type;
@@ -55,11 +56,22 @@ class ProductController extends Controller
 
         $prices = [];
         foreach($request->price as $i => $price) {
-            $prices[] = new Price(['material_id' => $request->material_id[$i], 'price' => $price]);
+            $prices[] = new Price([
+                'material_id' => $request->material_id[$i],
+                'price' => $price
+            ]);
         }
         $product->prices()->saveMany($prices);
 
-        return redirect()->route('backend.products.index')->with('alert', 'success');
+        $photos = [];
+        foreach($request->photos as $i => $photo) {
+            $photos[] = new Photo([
+                'profileImage' => 'storage/'.$request->file('photos')[$i]->store('product/photos'),
+            ]);
+        }
+        $product->photos()->saveMany($photos);
+
+        return redirect()->back()->with('alert', 'success');
     }
 
     public function update(ProductRequest $request, Product $product) {
@@ -79,13 +91,23 @@ class ProductController extends Controller
         }
         $product->prices()->delete();
         $product->prices()->saveMany($prices);
-        return 'success';
+
+        if($request->photos) {
+            $photos = [];
+            foreach($request->photos as $i => $photo) {
+                $photos[] = new Photo([
+                    'profileImage' => 'storage/'.$request->file('photos')[$i]->store('product/photos'),
+                ]);
+            }
+            $product->photos()->saveMany($photos);
+        }
+        return redirect()->back()->with('alert', 'success');
     }
 
     public function destroy(Product $product) {
         File::delete($product->profileImage);
         $product->delete();
-        return redirect()->route('backend.products.index')->with('alert', 'success');
+        return redirect()->back()->with('alert', 'success');
     }
 
     private function data() {

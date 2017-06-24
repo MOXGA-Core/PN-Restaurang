@@ -1,11 +1,17 @@
 @push('stylesheet')
 <style>
-    .food-menu-list-wrapper {
-        max-height: 765px;
+    .food-menu-list-wrapper > .inner {
+        max-height: 654px;
         overflow-y: auto;
+
+    }
+    .price-box a,
+    .price-box a:hover {
+        text-decoration: none;
     }
 </style>
 @endpush
+
 <section class="section-food-menu bg-fixed" id="menu">
     <div class="container">
 
@@ -18,7 +24,7 @@
                     <!-- Tab navs -->
                     <ul class="food-nav" role="tablist">
                         <li class="active">
-                            <a href="#fitem2" data-toggle="tab">
+                            <a href="#fitem1" data-toggle="tab">
                                 <div class="food-nav-item">
                                     <div class="nav-icon">
                                         <img class="nrm-icon" src="assets/img/icons/lunch_01.png" alt="Food nav icon">
@@ -33,7 +39,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#fitem3" data-toggle="tab">
+                            <a href="#fitem2" data-toggle="tab">
                                 <div class="food-nav-item">
                                     <div class="nav-icon">
                                         <img class="nrm-icon" src="assets/img/icons/dinner_01.png" alt="Food nav icon">
@@ -48,7 +54,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#fitem1" data-toggle="tab">
+                            <a href="#fitem3" data-toggle="tab">
                                 <div class="food-nav-item">
                                     <div class="nav-icon">
                                         <img class="nrm-icon" src="assets/img/icons/breakfast_01.png" alt="Food nav icon">
@@ -85,16 +91,13 @@
                                     <ul class="food-menu-list">
                                         @foreach($courses[0]->products as $product)
                                         <li>
-                                            <a href="#.">
+                                            <a href="#." data-id="{{ $product->id }}">
                                                 <div class="menu-media">
                                                     <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
                                                 </div><!--menu-media-->
                                                 <div class="menu-details">
                                                     <div class="heading clearfix">
                                                         <span class="title">{{ $product->name }}</span>
-                                                        @foreach($product->prices as $price)
-                                                            <span class="price">{{ $price->price }} Kr</span>
-                                                        @endforeach
                                                     </div>
                                                     <p>{{ $product->detail }}</p>
                                                 </div>
@@ -189,3 +192,48 @@
         </div>
     </div>
 </section>
+
+<div id="menuModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@push('javascript')
+<script>
+    $(function() {
+        $('.food-menu-list a').click(function() {
+            var id = $(this).data('id');
+
+            $.ajax({
+                url: "{{ route('home') }}/menu/" + id,
+                method: "GET",
+                success: function(response) {
+                    $modal = $('#menuModal');
+                    $modal.find('.modal-body').html(response);
+                    $modal.modal('show');
+                    $modal.find('[data-toggle="tooltip"]').tooltip();
+
+                    $modal.find(".related-post-slide").owlCarousel({
+                        navigation : true, // Show next and prev buttons
+                        navigationText:	["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+                        pagination: false,
+                        items: 4,
+                        //              singleItem:true,
+                        transitionStyle : "goDown",
+                    });
+
+                    var $grid = $('#grid');
+                    $grid.shuffle({
+                        itemSelector: '.grid-item' // the selector for the items in the grid
+                    });
+                }
+            });
+        });
+    });
+</script>
+@endpush

@@ -73,11 +73,18 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Gallery</span>
+                                    <input type="file" id="photos" name="photos[]" class="form-control" accept="image/*" multiple>
+                                </div>
+                            </div>
+
                             <div class="page-header">
                                 <div class="pull-right">
                                     <button type="button" class="btn btn-primary btn-xs add-btn"><span class="glyphicon glyphicon-plus"></span> Add</button>
                                 </div>
-                                <h5>Price</h5>
+                                <h4>Price</h4>
                             </div>
 
                             <div class="prices">
@@ -88,7 +95,7 @@
                                                 <div class="col-md-5">
                                                     <select name="material_id[]" class="form-control" data-value="{{ old('material_id')[$i] }}">
                                                         @foreach($materials as $material)
-                                                            <option value="{{ $material->id }}">{{ $material->title }}</option>
+                                                            <option value="{{ $material->id }}">{{ $material->name }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
@@ -110,7 +117,7 @@
                                             <div class="col-md-5">
                                                 <select name="material_id[]" class="form-control">
                                                     @foreach($materials as $material)
-                                                        <option value="{{ $material->id }}">{{ $material->title }}</option>
+                                                        <option value="{{ $material->id }}">{{ $material->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -170,6 +177,27 @@
             bindDeleteBtn();
         });
 
+        var bindRemoveImageBtn = function() {
+            $('.remove-image-btn').unbind().click(function() {
+                $btn = $(this);
+                if(confirm('Confirm to delete this image ?')) {
+                    $.ajax({
+                        url: $btn.data('url'),
+                        data: {_token: "{{ csrf_token() }}"},
+                        method: "DELETE",
+                        success: function() {
+                            $btn.parent().parent().slideUp(function() {
+                                $(this).remove();
+                            });
+                        },
+                        error: function() {
+                            alert('error !');
+                        }
+                    })
+                }
+            });
+        };
+
         var bindDeleteBtn = function() {
             $('.delete-btn').click(function() {
                 var $modal = $('#deleteModal');
@@ -188,35 +216,6 @@
                 if($(elem).find('.price-item').length >= maxPrice) {
                     $(elem).parent().find('.add-btn').attr('disabled', true);
                 }
-            });
-        };
-
-        var bindEditForm = function() {
-            $('#edit-form').submit(function(e) {
-                e.preventDefault();
-                var $form = $(this);
-
-               $.ajax({
-                   url: $form.attr('action'),
-                   method: "PUT",
-                   data: $form.serialize(),
-                   success: function(response) {
-                       $form.find('.alert').remove();
-                       if(response == 'success') {
-                           $('#edit-form > .form-group:last-child').prepend('<div class="alert alert-success" style="display: none"><span class="glyphicon glyphicon-ok"></span> Success</div>').find('.alert').slideDown();
-                       }
-                   },
-                   error: function(xhr, status, error) {
-                       var errors = $.parseJSON(xhr.responseText);
-                       $form.find('.alert').remove();
-                       $form.find('.help-block').remove();
-                       $form.find('.has-error').removeClass('has-error');
-
-                       $.each(errors, function(name, error) {
-                          $form.find('[name="' + name + '"]').focus().parents('.form-group').addClass('has-error').append('<span class="help-block">' + error + '</span>');
-                       });
-                   }
-               });
             });
         };
 
@@ -253,8 +252,8 @@
                     success: function(html) {
                         $('#add-panel').hide().parent().prepend(html);
                         $('#edit-panel').slideDown();
-                        bindEditForm();
 
+                        bindRemoveImageBtn();
                         bindCancelBtn();
                         bindAddBtn();
                         bindRemoveBtn();

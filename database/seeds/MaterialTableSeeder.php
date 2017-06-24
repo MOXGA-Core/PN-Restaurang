@@ -15,9 +15,10 @@ class MaterialTableSeeder extends Seeder
         Material::truncate();
 
         Material::insert([
-           ['iconImage' => 'icon.png', 'title' => 'ไก่'],
-           ['iconImage' => 'icon.png', 'title' => 'หมู'],
-           ['iconImage' => 'icon.png', 'title' => 'วัว'],
+           ['iconImage' => 'icon.png', 'name' => 'Pork'],
+           ['iconImage' => 'icon.png', 'name' => 'Chicken'],
+           ['iconImage' => 'icon.png', 'name' => 'Beef'],
+           ['iconImage' => 'icon.png', 'name' => 'Lamp'],
         ]);
     }
 }

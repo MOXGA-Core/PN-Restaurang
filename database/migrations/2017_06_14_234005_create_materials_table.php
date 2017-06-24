@@ -16,7 +16,7 @@ class CreateMaterialsTable extends Migration
         Schema::create('materials', function (Blueprint $table) {
             $table->increments('id');
             $table->string('iconImage');
-            $table->string('title');
+            $table->string('name');
         });
     }
 

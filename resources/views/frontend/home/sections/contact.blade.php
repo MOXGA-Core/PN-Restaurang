@@ -1,7 +1,7 @@
 <section class="section-contact" id="contact">
-    @include('frontend.layouts.title', ['title' => 'Contact Us', 'white' => true])
-
     <div class="container">
+        @include('frontend.layouts.title', ['title' => 'Contact Us', 'white' => true])
+
         <div class="row contact-dark-bg">
             <div class="col-sm-8">
                 <div class="contact-form-wrap">
@@ -83,9 +83,8 @@
 <script>
     $(function() {
         var responseBox = function(action, msg) {
-            $btn = $('#contact-form .btn-submit');
             var html = '<div class="alert alert-' + action + '">' + msg + '</div>';
-            $btn.parent().hide().html(html).slideDown();
+            $('.contact-form-wrap').parent().hide().html(html).fadeIn('slow');
         };
 
         $('#contact-form').submit(function(e) {

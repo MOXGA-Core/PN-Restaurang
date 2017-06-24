@@ -19,11 +19,17 @@
                     <li data-page="index">
                         <a href="{{ route('backend.index') }}">Home</a>
                     </li>
+                    <li data-page="materials">
+                        <a href="{{ route('backend.materials.index') }}">Materials</a>
+                    </li>
                     <li data-page="products">
                         <a href="{{ route('backend.products.index') }}">Products</a>
                     </li>
                     <li data-page="promotion">
                         <a href="{{ route('backend.promotion.index') }}">Promotion</a>
+                    </li>
+                    <li data-page="messages">
+                        <a href="{{ route('backend.messages.index') }}">Messages</a>
                     </li>
                     <li data-page="contact">
                         <a href="{{ route('backend.contact.index') }}">Contact</a>
