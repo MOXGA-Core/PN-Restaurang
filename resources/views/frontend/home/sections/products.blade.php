@@ -31,9 +31,8 @@
                                         <img class="hvr-icon" src="assets/img/icons/lunch_02.png" alt="Food nav icon">
                                     </div>
                                     <div class="nav-text">
-                                        <h5>Launch</h5>
-                                        <div class="time">Recommend: 10.30 - 04.00</div>
-                                        <div class="time">Time: Every time</div>
+                                        <h5>Förrätter</h5>
+                                        <div class="time">Välkommen</div>
                                     </div>
                                 </div>
                             </a>
@@ -46,9 +45,8 @@
                                         <img class="hvr-icon" src="assets/img/icons/dinner_02.png" alt="Food nav icon">
                                     </div>
                                     <div class="nav-text">
-                                        <h5>Dinner</h5>
-                                        <div class="time">Recommend: 04.00 - 09.00</div>
-                                        <div class="time">Time: Every time</div>
+                                        <h5>Huvudrätter</h5>
+                                        <div class="time">Välkommen</div>
                                     </div>
                                 </div>
                             </a>
@@ -61,8 +59,8 @@
                                         <img class="hvr-icon" src="assets/img/icons/breakfast_02.png" alt="Food nav icon">
                                     </div>
                                     <div class="nav-text">
-                                        <h5>Dessert</h5>
-                                        <div class="time">Time: Every time</div>
+                                        <h5>Efterrätter</h5>
+                                        <div class="time">Välkommen</div>
                                     </div>
                                 </div>
                             </a>
@@ -75,8 +73,8 @@
                                         <img class="hvr-icon" src="assets/img/icons/drinks_02.png" alt="Food nav icon">
                                     </div>
                                     <div class="nav-text">
-                                        <h5>Drink</h5>
-                                        <div class="time">Time: Every time</div>
+                                        <h5>Alkoholdrycker</h5>
+                                        <div class="time">Välkommen</div>
                                     </div>
                                 </div>
                             </a>

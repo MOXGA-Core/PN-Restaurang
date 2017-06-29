@@ -15,10 +15,10 @@ class CourseTableSeeder extends Seeder
         Course::truncate();
 
         Course::insert([
-            ['title' => 'เมนูก่อนอาหาร'],
-            ['title' => 'เมนูหลัก'],
-            ['title' => 'เมนูหลังอาหาร'],
-            ['title' => 'เครื่องดื่ม'],
+            ['title' => 'Förrätter'],
+            ['title' => 'Huvudrätter'],
+            ['title' => 'Efterrätter'],
+            ['title' => 'Alkoholdrycker'],
         ]);
     }
 }
