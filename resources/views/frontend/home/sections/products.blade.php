@@ -114,16 +114,13 @@
                                     <ul class="food-menu-list">
                                         @foreach($courses[1]->products as $product)
                                             <li>
-                                                <a href="#.">
+                                                <a href="#." data-id="{{ $product->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $product->name }}</span>
-                                                            @foreach($product->prices as $price)
-                                                                <span class="price">{{ $price->price }} Kr</span>
-                                                            @endforeach
                                                         </div>
                                                         <p>{{ $product->detail }}</p>
                                                     </div>
@@ -140,16 +137,13 @@
                                     <ul class="food-menu-list">
                                         @foreach($courses[2]->products as $product)
                                             <li>
-                                                <a href="#.">
+                                                <a href="#." data-id="{{ $product->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $product->name }}</span>
-                                                            @foreach($product->prices as $price)
-                                                                <span class="price">{{ $price->price }} Kr</span>
-                                                            @endforeach
                                                         </div>
                                                         <p>{{ $product->detail }}</p>
                                                     </div>
@@ -166,16 +160,13 @@
                                     <ul class="food-menu-list">
                                         @foreach($courses[3]->products as $product)
                                             <li>
-                                                <a href="#.">
+                                                <a href="#." data-id="{{ $product->id }}">
                                                     <div class="menu-media">
                                                         <img src="{{ $product->profileImage }}" alt="{{ $product->name }}" style="width: 88px; height: 88px;">
                                                     </div><!--menu-media-->
                                                     <div class="menu-details">
                                                         <div class="heading clearfix">
                                                             <span class="title">{{ $product->name }}</span>
-                                                            @foreach($product->prices as $price)
-                                                                <span class="price">{{ $price->price }} Kr</span>
-                                                            @endforeach
                                                         </div>
                                                         <p>{{ $product->detail }}</p>
                                                     </div>
