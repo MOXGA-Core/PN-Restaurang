@@ -171,10 +171,12 @@
     $(function() {
         var maxPrice = {{ $materials->count() }};
 
-        $('#dataTableBuilder').on( 'init.dt', function () {
-            bindEditBtn();
-            bindAddBtn();
-            bindDeleteBtn();
+        $('#dataTableBuilder').on('order.dt search.dt page.dt', function () {
+            setTimeout(function() {
+                bindEditBtn();
+                bindAddBtn();
+                bindDeleteBtn();
+            }, 500);
         });
 
         var bindRemoveImageBtn = function() {
