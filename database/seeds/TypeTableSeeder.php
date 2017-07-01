@@ -14,11 +14,11 @@ class TypeTableSeeder extends Seeder
         Type::truncate();
 
         Type::insert([
-            ['title' => 'ทอด'],
-            ['title' => 'แกง, ต้มยำ'],
-            ['title' => 'ผัด'],
-            ['title' => 'เส้น'],
-            ['title' => 'เมนูพิเศษ'],
+            ['title' => 'Friterade Rätter Med Ris'],
+            ['title' => 'Curry Rätter & Soppa Med Ris'],
+            ['title' => 'Wokade Rätter Med Ris'],
+            ['title' => 'Stekta Nudlar Eller Ris'],
+            ['title' => 'Speecial'],
         ]);
     }
 }
