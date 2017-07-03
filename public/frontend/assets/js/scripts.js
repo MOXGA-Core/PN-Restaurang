@@ -241,8 +241,8 @@
         }	
 		function init() {
 		var myLatlng = new google.maps.LatLng(23.823824, 90.364351);//Add your Latitude longitude Value here to change map location
-		var maptooltipbold = 'ThemeEver';
-		var maptooltip = 'You can add your content here';  
+		var maptooltipbold = 'Välkomna';
+		var maptooltip = 'Phou Nam Thai Restaurang & Take Away';
 		//---------------------------------------------------------//
 		var mapOptions = {
 		zoom: 17,
